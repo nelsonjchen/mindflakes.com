@@ -46,6 +46,7 @@ gem 'faker'
 gem 'rake'
 gem 'guard'
 gem 'guard-nanoc', :git => "https://github.com/nanoc/guard-nanoc.git"
+gem 'terminal-notifier-guard'
 gem 'rb-fsevent', '~> 0.9'
 
 # String operations for post creation
