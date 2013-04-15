@@ -45,7 +45,7 @@ gem 'pygments.rb'
 gem 'faker'
 gem 'rake'
 gem 'guard'
-gem 'guard-nanoc', :git => "https://github.com/nanoc/guard-nanoc.git"
+gem 'guard-nanoc', :git => 'https://github.com/nanoc/guard-nanoc.git'
 gem 'terminal-notifier-guard'
 gem 'rb-fsevent', '~> 0.9'
 
