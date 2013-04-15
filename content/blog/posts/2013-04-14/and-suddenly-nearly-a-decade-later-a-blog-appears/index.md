@@ -1,11 +1,12 @@
 I'm ashamed to say I've neglected this domain and site for 9 years. In that
 time I've gone through high school and university in that time. In each period,
-I've attempted putting up blogs, forums, another blog, and other similar
-nonsense. I did not follow through with whatever resolutions I may have made to
-keep the site maintained or write down the latest results from my last screwing
-around with my projects. Basically, for the past 9 years, I don't really have
-much to show for it other than being able to rattle off some helpful anecdote
-from experiences I have never written down here and there.
+I've attempted [putting up blogs, forums, another blog, and other similar
+nonsense](http://web.archive.org/web/*/http://mindflakes.com). I did not follow
+through with whatever resolutions I may have made to keep the site maintained
+or write down the latest results from my last screwing around with my projects.
+Basically, for the past 9 years, I don't really have much to show for it other
+than being able to rattle off some helpful anecdote from experiences I have
+never written down here and there.
 
 > Remember kids, the only difference between screwing around and Science is
 > writing it down.
