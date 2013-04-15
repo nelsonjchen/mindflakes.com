@@ -58,7 +58,8 @@ a problem in that I had absolutely no experience with `nanoc`.
 In September 2012, I answered a request for help from an organization
 named Because of Hope at the beginning of my last quarter at UCSB. Because of
 Hope is an organization that helps children and women in Uganda through
-sustainable methods. Here's the email:
+sustainable methods. Here's the email that was sent to the UCSB Computer
+Science jobs list:
 
 > My name is Natalie Lemonnier and I graduated from UCSB in 2011. Since
 > graduating, two of my friends and I have started a nonprofit here in
@@ -101,7 +102,7 @@ sustainable methods. Here's the email:
 >
 > Natalie Lemonnier
 
-So, I needed some experience doing a nanoc site,  something nice to put on my
+So, I needed some experience doing a `nanoc` site,  something nice to put on my
 résumé, and something to satisfy and fulfill the "help poor children in Uganda"
 request in the `Vim` text editor. Because of Hope needed someone to maintain
 their site.  With my résumé as sparse as it is, I called up Natalie and offered
@@ -121,20 +122,21 @@ enough to add a donations page that they immediately needed for their upcoming
 fundraiser.
 
 On the bright side, all the mockups that Nikki Day of BOH did were in
-photoshop. They were far more ambitious than what the current site's current
+Photoshop. They were far more ambitious than what the current site's current
 implementation. The custom 980px grid system was not up the the task. In
-retrospect, it would have been thrown out anyway.
+retrospect, it would have been thrown out anyway. I shudder at what beast
+I would have had to slayed if the original plans had gone through.
 
 I chose to use [Zurb Foundation](http://foundation.zurb.com/). Zurb Foundation
 is a front-end framework that is far more flexible than many other frameworks
 out there. This was the the kind of Framework that could handle Nikki's
 designs. I would also get free functionality such as drop-down menus, pretty
-buttons, and first-class support for SCSS, an extension of CSS. Zurb
-Foundation's use of SCSS was very instrumental in adapting the design of Zurb
-Foundation for Nikki's designs. Compared to its competitor Twitter Bootstrap,
-there is far more control over elements on the page, especially the buttons.
-Also, I got a mobile site for free! BOH didn't even ask for it but it came with
-it!
+buttons, photo carousel, and first-class support for SCSS, an extension of CSS.
+Zurb Foundation's use of SCSS was very instrumental in adapting the design of
+Zurb Foundation for Nikki's designs. Compared to its competitor Twitter
+Bootstrap, there is far more control over elements on the page, especially the
+buttons.  Also, I got a mobile site for free! BOH didn't even ask for it but it
+came with it!
 
 Ever since from that time, I've been working on BOH's `nanoc` site. I learned
 how to better compose layouts, the Rules DSL of nanoc, and the whole `nanoc`
@@ -157,9 +159,9 @@ Also, in doing `nanoc`, I now realize how much of a pain in the ass it is to
 update the original site. There was so much copy-paste! How do people do all
 these busy work?
 
-I learned a lot from doing BOH and I am continuing to work on it in my spare
-time. It's source code is versioned in a Git repository so I can experiment on
-it all I want. It's also open source in a [GitHub
+I learned a lot from doing the BOH site and I am continuing to work on it in my
+spare time. It's source code is versioned in a Git repository so I can
+experiment on it all I want. It's also open source in a [GitHub
 repository](https://github.com/becauseofhope/because-of-hope). If anybody wants
 to peruse it and reuse parts of it, they are more than welcome to do so. I plan
 to keep it in sync with anything that is a `nanoc` best-practice and update it
@@ -168,15 +170,16 @@ with new pages.
 ### Mindflakes
 
 Okay, so I've helped a non-profit get their site stuff in shape and beyond.
+
 What about my personal site?
 
 Ever since I've started the BOH site project, I've probably made 3 false starts
 in creating mindflakes.com. I wager I wasn't confident enough in my `nanoc`
 knowledge in the previous starts. I had given up or I did not have enough time
 to really sit down and really start work on my site. Also, I was working part
-time at a local company at this time. I came back home so exhausted from looking
-through piles of Ruby and Python that I really did not want to put my finger to
-the keyboard.
+time at a local company in the area at this time. I came back home so exhausted
+from looking through piles of Ruby and Python that I really did not want to put
+my finger to the keyboard.
 
 Maybe the fourth time was the charm? I didn't start the mindflakes
 project this time. What I did instead was start an [example/bootstrap
@@ -188,11 +191,22 @@ Javascript is sourced from its gem. There were plenty of Bootstrap examples out
 there but I believe that Zurb Foundation better fits with the `nanoc`
 philosophy in letting power come out in the right places when needed.
 
-This is my first long blog post ever. I wrote this to test out this blog. As of
-this post, Mindflakes.com is still very much out-of-the-box even though I just
-built the box. I will customize it and make it look pretty enough to showcase
-my work over the next few sessions.
+By distilling the framework from the content of my site, I was able to work
+away from any pressure in having a nice site to present. Just having a good
+framework to build upon is much more gratifying.
 
+Not only that, I now have a free reusable framework that I may be able to reuse
+for client projects that don't involve my site. I don't have to extract magic
+or best practice out of my site. I can just rebase anything off of the
+framework with the way I like it. I plan to contribute anything I think is
+relevant while building my own site back to the framework.
+
+This is my first long blog post since ever. I wrote this to test out this blog.
+As of this post, Mindflakes.com is still very much out-of-the-box even though
+I just built the box. I will customize it and make it look pretty enough to
+really showcase my work over the next few sessions. I'm going to have to decide
+what to do about images and what to do with the flexibility that Zurb
+Foundation offers me.
 
 
 
