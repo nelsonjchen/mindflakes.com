@@ -126,7 +126,7 @@ On the bright side, all the mockups that Nikki Day of BOH did were in
 Photoshop. They were far more ambitious than what the current site's current
 implementation. The custom 980px grid system was not up the the task. In
 retrospect, it would have been thrown out anyway. I shudder at what beast
-I would have had to slayed if the original plans had gone through.
+I would have had to slay if the original plans had gone through.
 
 I chose to use [Zurb Foundation](http://foundation.zurb.com/). Zurb Foundation
 is a front-end framework that is far more flexible than many other frameworks
@@ -154,7 +154,7 @@ app](http://blog.apps.npr.org/2013/02/14/app-template-redux.html). I'm not
 saying that BOH will become as big as the presedential election, but it can
 definitely handle that much traffic if need be and certianly more than
 a $20/month VPS. Honestly, I'm just glad I don't have to manage a Linux server
-to achieve this goal.
+to achieve this goal. It's really upload and forget.
 
 Also, in doing `nanoc`, I now realize how much of a pain in the ass it is to
 update the original site. There was so much copy-paste! How do people do all
@@ -208,6 +208,8 @@ I just built the box. I will customize it and make it look pretty enough to
 really showcase my work over the next few sessions. I'm going to have to decide
 what to do about images and what to do with the flexibility that Zurb
 Foundation offers me.
+
+As for what to write, I think I have that settled.
 
 
 
