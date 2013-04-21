@@ -1,67 +1,19 @@
 .row
   .large-8.columns
-    %h2
-      I am an Web Applications Developer and a *nix Systems Administrator in the Santa Barbara or San Gabriel Valley
-      area of Southern California.
+    %h1 Nelson Chen
     :markdown
-      My name is Nelson Chen.
-
-      I can help you with your systems, product, application, or experience.
+      Hello! I'm a developer.
   .large-4.columns
-    :markdown
-      Put picture here
+    %a.button.expand{href: 'https://github.com/crazysim'}
+      GitHub
+    %a.button.expand{href: 'https://github.com/crazysim/cvtex/blob/mod_nelson/cv_nelson.pdf?raw=true'}
+      Resume
 .row
   .large-12.columns
-    %ul.large-block-grid-3
-      %li
-        %h4 Ruby
-      %li
-        %h4 Scala
-      %li
-        %h4 Debian
-      %li
-        %h4 Ubuntu
-      %li
-        %h4 Web Design
-.row
-  .large-12.columns
-    :markdown
-      * Ruby
-        * Ruby on Rails
-        * `nanoc`
-      * Scala
-        * Play Framework
-        * Akka Actors
-      * Debian/Ubuntu
-        * `iptables`
-        * Packaging and Administration
-      * OS X
-      * Web Design
-        * Zurb Foundation
-        * Twitter Bootstrap
-        * Photoshop
-      * Systems Deployment
-        * Heroku
-        * Chef
-      * Systems Development
-        * Vagrant
-        * Chef Solo
-      * PostgreSQL
-      * Java
-        * Android
-      * IDE
-        * IntelliJ IDEA
-        * Vim
-      * GIS
-        * OpenStreetMap
-      * Python
-      * LaTeX
-.row
-  .large-6.columns
-    %h3 Links
-    %ul
-      %li GitHub
-      %li Pinboard
-  .large-6.columns
-    %h3 Recent Blog Posts
+    %h2 Recent Blog Posts
+    - sorted_articles.take(5).each do |article|
+      %h5
+        %a{href: article.path}
+          = article[:title]
+        \- #{article[:created_at].strftime('%B %d')}
 
