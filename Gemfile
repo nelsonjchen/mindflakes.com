@@ -27,6 +27,7 @@ gem 'haml'
 
 # Deployment
 gem 'fog'
+gem 'systemu'
 
 # Optimization
 gem 'uglifier'
