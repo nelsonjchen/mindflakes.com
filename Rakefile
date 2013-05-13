@@ -5,7 +5,7 @@ require 'rubygems'
 desc 'Create a new post'
 task :new_post, :title do |t, args|
   args.with_defaults(:title => 'New Post')
-  title = args.title
+  title = args.to_hash.values.join(',')
   path =  "./content/blog/posts/#{Time.now.strftime('%Y-%m-%d')}/#{title.to_url}"
   mkdir_p path
   filename = "#{path}/index.md"
