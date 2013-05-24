@@ -13,21 +13,22 @@
     %link{:href => '/assets/stylesheets/app.css', :rel => 'stylesheet'}/
     %script{:src => '/assets/javascripts/foundation/vendor-custom-modernizr.js'}
   %body
-    %nav.top-bar
-      %ul.title-area
-        %li.name
-          %h1
-            %a{href: '/'}
-              Mindflakes
-        %li.toggle-topbar.menu-icon
-          %a{href: '#'}
-            %span Menu
-      %section.top-bar-section
-        %ul.right
-          %li
-            %a{href: '/blog/'} Blog
-          %li
-            %a{href: '/blog/archives/'} Archives
+    %header
+      %nav.top-bar
+        %ul.title-area
+          %li.name
+            %h1
+              %a{href: '/'}
+                Mindflakes
+          %li.toggle-topbar.menu-icon
+            %a{href: '#'}
+              %span Menu
+        %section.top-bar-section
+          %ul.right
+            %li
+              %a{href: '/blog/'} Blog
+            %li
+              %a{href: '/blog/archives/'} Archives
 
     = yield
     .row

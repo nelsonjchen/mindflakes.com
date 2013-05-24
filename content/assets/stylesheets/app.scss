@@ -46,3 +46,7 @@
 
 @import "pygments";
 
+header {
+  @include grid-row();
+}
+
