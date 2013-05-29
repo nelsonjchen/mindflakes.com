@@ -29,7 +29,7 @@ for USB installation which is most likely to be the case for all new Macs from
   Apple to 'fix' this, they will just blame Microsoft which admittedly isn't
   blame free either.
 
-To solve this problem, move or delete Autounattend.xml on the root of the USB
+To solve this problem, move or delete `Autounattend.xml` on the root of the USB
 drive and proceed with the normal steps afterwards .  After Windows is done
 installing and since `Autounattend.xml` was nullified, you will have to run the
 Boot Camp support installer from the BootCamp folder on the USB drive.
