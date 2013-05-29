@@ -63,6 +63,7 @@ compile '/blog/posts/*' do
                                   autolink: true},
                     :renderer_options => {hard_wrap: false}
   filter :colorize_syntax, :default_colorizer => :pygmentsrb
+  filter :typogruby
   layout 'post'
 end
 
@@ -105,6 +106,7 @@ compile '*' do
     end
     layout 'default'
   end
+  filter :typogruby
 end
 
 route '*' do

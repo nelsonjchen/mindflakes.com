@@ -38,6 +38,8 @@ gem 'redcarpet'
 # Code hilighting
 gem 'pygments.rb'
 
+gem 'typogruby'
+
 # Development
 gem 'faker'
 gem 'rake'
