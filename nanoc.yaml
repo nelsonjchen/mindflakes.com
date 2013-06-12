@@ -1,7 +1,7 @@
-base_url: http://www.example.com
-author_name: Nanoc Blog User
-author_uri: https://github.com/crazysim/nanoc-foundation-blog
-title: Nanoc Foundation Blog
+base_url: http://www.mindflakes.com
+author_name: Nelson Chen
+author_uri: https://mindflakes.com
+title: Mindflakes
 
 # A list of file extensions that nanoc will consider to be textual rather than
 # binary. If an item with an extension not in this list is found,  the file
