@@ -10,4 +10,4 @@ devices to your VM. USB filters can be added while the machine is powered off.
 They'll be applied upon boot or, in this case, `vagrant up`.
 
 [Virtualbox]: http://virtualbox.org
-[solution: https://gist.github.com/crazysim/c09924feb0830415a1d0#file-solution
+[solution]: https://gist.github.com/crazysim/c09924feb0830415a1d0#file-solution
