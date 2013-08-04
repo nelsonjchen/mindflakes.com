@@ -13,5 +13,7 @@ use OpenAL for output. Unmute speakers. Enjoy.
 
 So far this works for the tech demo. I'm going to try it on Alpha later.
 
+UPDATE: It works on Alpha. Yay!
+
 [BeamNG Drive]: http://www.beamng.com/drive/
 [Wineskin]: http://wineskin.urgesoftware.com/tiki-index.php?page=Wineskin%2C+Play+your+favorite+Windows+games+on+Mac+OS+X+without+needing+Microsoft+Windows
