@@ -1,17 +1,24 @@
 .row
-  .large-8.columns
+  .large-6.columns
     %h1 Nelson Chen
     :markdown
-      San Diego, CA
+      Welcome to my rather spartan and unmaintained site.
+  .large-6.columns
+    %h5 😚
+    :markdown
+      If you want to know what I'm making, thinking, or doing,
+      check these out:
 
-  .large-4.columns
     %a.button.expand{href: 'https://github.com/nelsonjchen'}
       GitHub
+    %a.button.expand{href: 'https://twitter.com/crazysim'}
+      Twitter
     %a.button.expand{href: 'https://github.com/nelsonjchen/cvtex/blob/mod_nelson/cv_nelson.pdf?raw=true'}
-      Resume
+      Résumé
+
 .row
   .large-12.columns
-    %h2 Recent Blog Posts
+    %h2 "Recent" Blog Posts
     - sorted_articles.take(5).each do |article|
       %h5
         %a{href: article.path}
