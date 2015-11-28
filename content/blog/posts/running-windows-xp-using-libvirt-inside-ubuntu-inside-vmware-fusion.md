@@ -1,3 +1,10 @@
+---
+title: "Running Windows XP using Libvirt inside Ubuntu inside VMWare Fusion"
+created_at_time: 18:09:02 -0800
+---
+
+2014-01-06
+
 So I'm investigating running Windows XP inside `libvirt` in Ubuntu on my MacBook for continuous integration testing
 purposes with Jenkins. I tried for many hours to get it working but Windows would not boot up or it would get stuck
 on the `NTLDR cannot be found` issue. As it turns out, I did not enable "Enable hypervisor applications in this

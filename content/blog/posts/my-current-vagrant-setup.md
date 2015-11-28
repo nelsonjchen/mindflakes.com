@@ -1,3 +1,10 @@
+---
+title: "My current vagrant setup"
+created_at_time: 20:09:42 -0700
+---
+
+2013-06-22
+
 I firmly believe that [Vagrant][1] is the quickest way from nothing to a running and preconfigured development
 environment on any machine and especially Macs. For me, the ['works on my machine' problem][2] is the biggest reason I
 run Vagrant. Day-to-day though, Vagrant is probably the easiest to use UI for [Virtualbox][3]. If my work actually

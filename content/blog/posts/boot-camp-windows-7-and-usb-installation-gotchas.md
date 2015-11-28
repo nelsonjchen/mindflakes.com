@@ -1,3 +1,9 @@
+---
+title: "Boot Camp, Windows 7, and USB Installation Gotchas"
+created_at_time: 15:23:28 -0700
+---
+2013-5-13
+
 A few days ago, I decided to pull the trigger and install Windows on my Retina
 MacBook Pro at a LAN Party. It's a perfectly fine machine with a decent
 graphics card and CPU. I started Boot Camp Assistant and followed through with

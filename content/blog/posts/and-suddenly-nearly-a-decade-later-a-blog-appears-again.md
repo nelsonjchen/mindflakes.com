@@ -1,3 +1,10 @@
+---
+title: "And suddenly, nearly a decade later, a blog appears! Again."
+created_at_time: 22:05:53 -0700
+---
+
+2013-4-14
+
 I'm ashamed to say I've neglected this domain and site for 9 years. In that
 time I've gone through high school and university in that time. In each period,
 I've attempted [putting up blogs, forums, another blog, and other similar
@@ -210,6 +217,3 @@ what to do about images and what to do with the flexibility that Zurb
 Foundation offers me.
 
 As for what to write, I think I have that settled.
-
-
-

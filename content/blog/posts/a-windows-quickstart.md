@@ -1,3 +1,10 @@
+---
+title: "A Windows \"QuickStart\""
+created_at_time: 20:33:11 -0700
+---
+
+2013-5-26
+
 I paid Swish $25 and $8 shipping for [this](http://www.swish.com/details/devkit/) two months ago. I think I had my
 share donated to the Khan Academy.
 
@@ -70,9 +77,3 @@ codes and an ISO does not look well for Microsoft's Windows efforts at all. It w
 obtain these materials. 30 minutes is far less than two months. Oh, I almost forgot,
 they don't even include Parallels in the package. You will have to go download that from Parallel's site.
 What a "quickstart" indeed.
-
-
-
-
-
-
