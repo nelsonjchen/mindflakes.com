@@ -1,9 +1,7 @@
 ---
 title: "And suddenly, nearly a decade later, a blog appears! Again."
-created_at_time: 22:05:53 -0700
+created_at_time: 22:05:53-07:00
 ---
-
-2013-4-14
 
 I'm ashamed to say I've neglected this domain and site for 9 years. In that
 time I've gone through high school and university in that time. In each period,

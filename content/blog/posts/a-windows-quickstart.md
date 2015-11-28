@@ -1,9 +1,8 @@
 ---
 title: "A Windows \"QuickStart\""
-created_at_time: 20:33:11 -0700
----
+date: 2013-05-26 20:33:11-07:00
 
-2013-5-26
+---
 
 I paid Swish $25 and $8 shipping for [this](http://www.swish.com/details/devkit/) two months ago. I think I had my
 share donated to the Khan Academy.

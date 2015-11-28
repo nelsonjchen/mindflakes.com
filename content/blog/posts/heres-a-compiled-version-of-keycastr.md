@@ -1,9 +1,7 @@
 ---
 title: "Here's a compiled version of Keycastr."
-created_at_time: 13:02:12 -0700
+created_at_time: 13:02:12-07:00
 ---
-
-2013-5-22
 
 I just compiled a version of keycastr and put it here since I could not find a precompiled version that's relatively
 new.

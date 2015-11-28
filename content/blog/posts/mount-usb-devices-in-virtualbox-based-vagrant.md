@@ -1,9 +1,7 @@
 ---
 title: "Mount USB devices in Virtualbox-based Vagrant"
-created_at_time: 17:03:05 -0700
+created_at_time: 17:03:05-07:00
 ---
-
-2013-07-24
 
 If you want to mount USB in [Virtualbox][], you have to do this [solution][]. At
 the time of this post, a typical Google search for this would go to a solution
