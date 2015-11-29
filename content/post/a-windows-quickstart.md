@@ -36,7 +36,7 @@ Xbox where game developers are used to putting up with shit like that. Mobile de
 and prefer native tools. I'm not sure if this is still the case now but the Android team saw fit at one point to
 maintain the Android compilation toolchain for the entire OS *on* OS X. You can compile a Linux system on OS X!
 
-With that said, this cool cardboard box is all that remails. It would be well designed if it never existed. It's way
+With that said, this cool cardboard box is all that remains. It would be well designed if it never existed. It's way
 too late for that though.
 
 It's made up of two big pieces. After ripping off the plastic wrapper, there's a windows logo cutout sleeve thing to
