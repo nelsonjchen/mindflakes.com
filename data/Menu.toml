@@ -1,0 +1,23 @@
+[1]
+    Name = "About"
+    URL = "/about"
+
+[2]
+    Name = "Posts"
+    Title = "Show list of posts"
+    URL = "/post"
+
+[3]
+    Name = "Tags"
+    Title = "Show list of tags"
+    URL = "/tags"
+
+[4]
+    Name = "GitHub"
+    Title = "My GitHub Profile"
+    URL = "https://github.com/nelsonjchen"
+
+[5]
+    Name = "Twitter"
+    Title = "My Twitter"
+    URL = "https://twitter.com/crazysim"
