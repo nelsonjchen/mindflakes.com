@@ -1,18 +1,23 @@
 baseurl = "http://mindflakes.com/"
 languageCode = "en-us"
-title = "Mindflakes"
+copyright = "© 2015 Nelson Chen"
+title = "Nelson Chen"
 theme = "hyde-y"
+
 paginate = 10
 paginatePath = "page"
+
+[author]
+name = "Nelson Chen"
 
 [permalinks]
 post = "posts/:year/:month/:day/:slug/"
 
 [params]
 # You can use markdown here.
-brand = "Nelson Chen"
-topline = ""
-footline = "---"
+brand = "❄︎"
+topline = "<hr/>"
+footline = " (╯°□°）╯︵ ┻━┻"
 
 # Sidebar position
 # false, true, "left", "right"
@@ -21,3 +26,16 @@ sidebar = "left"
 # Text for the top menu link, which goes the root URL for the site.
 # Default (if omitted) is "Home".
 home = "home"
+
+# Select a syntax highight.
+# Check the static/css/highlight directory for options.
+highlight = "default"
+
+[blackfriday]
+angledQuotes = false
+fractions = false
+hrefTargetBlank = false
+latexDashes = true
+plainIdAnchors = true
+extensions = []
+extensionmask = []
