@@ -17,7 +17,7 @@ post = "posts/:year/:month/:day/:slug/"
 # You can use markdown here.
 brand = "❄︎"
 topline = "<hr/>"
-footline = " (╯°□°）╯︵ ┻━┻"
+footline = "(╯°□°）╯︵ ┻━┻"
 
 # Sidebar position
 # false, true, "left", "right"
