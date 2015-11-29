@@ -10,9 +10,9 @@ post = "posts/:year/:month/:day/:slug/"
 
 [params]
 # You can use markdown here.
-brand = "foobar"
-topline = "few words about your site"
-footline = "code with <i class='fa fa-heart'></i>"
+brand = "Nelson Chen"
+topline = ""
+footline = "---"
 
 # Sidebar position
 # false, true, "left", "right"
