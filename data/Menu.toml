@@ -17,3 +17,8 @@
     Name = "Twitter"
     Title = "My Twitter"
     URL = "https://twitter.com/crazysim"
+
+[6]
+    Name = "RSS"
+    Title = "RSS"
+    URL = "/index.xml"
