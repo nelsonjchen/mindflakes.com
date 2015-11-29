@@ -1,0 +1,7 @@
+baseurl = "http://mindflakes.com/"
+languageCode = "en-us"
+title = "Mindflakes"
+theme = "hyde-y"
+
+[permalinks]
+post = "posts/:year/:month/:day/:slug/"
