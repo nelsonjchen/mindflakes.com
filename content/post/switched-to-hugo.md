@@ -25,22 +25,26 @@ and all the goodies that come with that. I guess I could also start using
 something like [prose.io][] to write my posts as well. I doubt I will go that
 far! But, it is very nice to know that is possible.
 
-I am now just using a theme called[hyde-y][] which is off-the-shelf. Of course,
-I did customize it a little bit. [hugo][]'s overriding system is plain and
-simple to use.
+I am now just using a theme called [hyde-y][] which is off-the-shelf. Of
+course, I did customize it a little bit. [hugo][]'s overriding system is plain
+and simple to use.
 
 * Why would anyone want summaries on the front page? Just give the complete
   content.
 * The titles of the posts on the front page should have the same information.
 
+I addressed all that, and while it was a bit of a hunt, it was fairly clear
+what needed to be done.
+
 I do not think I will go the full mile with customizing `hugo` like I did with
 `nanoc`. The complexity was hurting more than it helped. I guess I have
-switched over to being more minimalist.  [Foundation][] is great if you need
-the kitchen sink and everything but it is really overkill. It was also another
-maintenance burden with its rather relentless upgrade schedule.
+switched over to being more minimalist since I concieved the original site.
+[Foundation][] is great if you need the kitchen sink and everything but it is
+really overkill. It was also another maintenance burden with its rather
+relentless upgrade schedule. I am taking it slow from here on out.
 
 [hugo]: http://hugo.spf13.com
 [nanoc]: http://nanoc.ws/
-[Foundation]: http://foundation.zurb.com/
-[hyde-y][]: https://github.com/enten/hyde-y
-[prose.io][]: http://prose.io
+[hyde-y]: https://github.com/enten/hyde-y
+[prose.io]: http://prose.io
+[Foundation]: http://foundation.zurb.com
