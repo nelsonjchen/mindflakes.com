@@ -1,6 +1,6 @@
 ---
 title: "Running Windows XP using Libvirt inside Ubuntu inside VMWare Fusion"
-created_at_time: 18:09:02 -0800
+date: 2014-01-06 18:09:02-07:00
 ---
 
 So I'm investigating running Windows XP inside `libvirt` in Ubuntu on my MacBook for continuous integration testing

@@ -1,6 +1,6 @@
 ---
 title: "And suddenly, nearly a decade later, a blog appears! Again."
-created_at_time: 22:05:53-07:00
+date: 2013-04-14 22:05:53-07:00
 ---
 
 I'm ashamed to say I've neglected this domain and site for 9 years. In that

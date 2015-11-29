@@ -1,6 +1,6 @@
 ---
 title: "BeamNG DRIVE on Mac OS X with CrossOver"
-created_at_time: 16:06:37-07:00
+date: 2013-08-03 16:06:37-07:00
 ---
 
 Gotta make this quick. This post will change.

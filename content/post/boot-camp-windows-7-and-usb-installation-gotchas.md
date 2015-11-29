@@ -1,6 +1,6 @@
 ---
 title: "Boot Camp, Windows 7, and USB Installation Gotchas"
-created_at_time: 15:23:28-07:00
+date: 2013-05-13 15:23:28-07:00
 ---
 2013-5-13
 

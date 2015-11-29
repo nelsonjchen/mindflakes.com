@@ -1,6 +1,6 @@
 ---
 title: "Reddit Link: LEARN VERSION CONTROL if you are in UCSB CS!"
-created_at_time: 16:19:28-07:00
+date: 2013-05-07 16:19:28-07:00
 ---
 
 Here's a comment I wrote on /r/UCSantaBarbara a month ago. Learning Git is

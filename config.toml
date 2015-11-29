@@ -2,6 +2,22 @@ baseurl = "http://mindflakes.com/"
 languageCode = "en-us"
 title = "Mindflakes"
 theme = "hyde-y"
+paginate = 10
+paginatePath = "page"
 
 [permalinks]
 post = "posts/:year/:month/:day/:slug/"
+
+[params]
+# You can use markdown here.
+brand = "foobar"
+topline = "few words about your site"
+footline = "code with <i class='fa fa-heart'></i>"
+
+# Sidebar position
+# false, true, "left", "right"
+sidebar = "left"
+
+# Text for the top menu link, which goes the root URL for the site.
+# Default (if omitted) is "Home".
+home = "home"
