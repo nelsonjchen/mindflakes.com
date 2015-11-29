@@ -7,3 +7,4 @@ deploy:
   local-dir: public
   on:
     repo: nelsonjchen/mindflakes.com
+    branch: master
