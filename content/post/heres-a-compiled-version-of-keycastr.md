@@ -1,6 +1,8 @@
 ---
 title: "Here's a compiled version of Keycastr."
 date: 2013-05-22 13:02:12-07:00
+aliases:
+  - /blog/posts/2013/5/22/heres-a-compiled-version-of-keycastr/
 ---
 
 I just compiled a version of keycastr and put it here since I could not find a precompiled version that's relatively

@@ -1,7 +1,8 @@
 ---
 title: "A Windows \"QuickStart\""
 date: 2013-05-26 20:33:11-07:00
-
+aliases:
+  - /blog/posts/2013/5/26/a-windows-quickstart/
 ---
 
 I paid Swish $25 and $8 shipping for [this](http://www.swish.com/details/devkit/) two months ago. I think I had my
