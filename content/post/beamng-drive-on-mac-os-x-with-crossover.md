@@ -9,9 +9,15 @@ tags:
   - mac
 ---
 
-Gotta make this quick. This post will change.
+**UPDATE** 2015-11-28: Hey BeamNG forum users. These instructions worked for me way
+back when I was using CrossOver. You might be able to get similar or better results
+with Wineskin Winery or some other Wine wrapper. And those are *free* too!
+I don't run BeamNG on my local laptop anymore nowadays but I [Game on Amazon EC2][]
+and it works fairly well at a very minimal cost.
 
-[Imgur](http://i.imgur.com/1cagpNd.jpg)
+![beamng on crossover](/images/beamng-crossover.jpg)
+
+Gotta make this quick. This post will change.
 
 Here's how to get [BeamNG Drive][] working in Mac OS X. I'm sure there are equivilent instructions for [Wineskin][]
 but I have no time to find out.
@@ -26,5 +32,6 @@ So far this works for the tech demo. I'm going to try it on Alpha later.
 
 UPDATE: It works on Alpha. Yay!
 
+[Game on Amazon EC2]: (lg.io/2015/07/05/revised-and-much-faster-run-your-own-highend-cloud-gaming-service-on-ec2.html).
 [BeamNG Drive]: http://www.beamng.com/drive/
 [Wineskin]: http://wineskin.urgesoftware.com/tiki-index.php?page=Wineskin%2C+Play+your+favorite+Windows+games+on+Mac+OS+X+without+needing+Microsoft+Windows
