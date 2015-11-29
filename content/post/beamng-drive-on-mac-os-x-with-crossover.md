@@ -13,7 +13,7 @@ tags:
 back when I was using CrossOver. You might be able to get similar or better results
 with Wineskin Winery or some other Wine wrapper. And those are *free* too!
 I don't run BeamNG on my local laptop anymore nowadays but I [Game on Amazon EC2][]
-and it works fairly well at a very minimal cost.
+and it works fairly well with BeamNG at a very minimal cost.
 
 ![beamng on crossover](/images/beamng-crossover.jpg)
 
