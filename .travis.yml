@@ -14,6 +14,7 @@ deploy:
   bucket: mindflakes.com
   local-dir: public
   skip_cleanup: true
+  acl: public_read
   on:
     repo: nelsonjchen/mindflakes.com
     branch: master
