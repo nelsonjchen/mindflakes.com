@@ -12,6 +12,7 @@ deploy:
     secure: GJDAdjIs8hdWkuc56hk8Tvfxem+9l25Yc1kf9V+kjad2xoy40wsVXNljyaORXYwVfdXJT9STBYCRSMGyUdMDa57Qo5Iir7Rcaaq/q6zynfziVKxZ0tb5jUQWyNrPsqzpL+Cvk3dEKTBwwo6g0X4TXLpwpDNg872HUE3ftrS/6MI=
   bucket: mindflakes.com
   local-dir: public
+  skip_cleanup: true
   on:
     repo: nelsonjchen/mindflakes.com
     branch: master
