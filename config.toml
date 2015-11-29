@@ -17,7 +17,7 @@ post = "posts/:year/:month/:day/:slug/"
 
 [params]
 # You can use markdown here.
-brand = "❄︎"
+brand = "❄ ❄❄  ❄❄❄ ❄❄❄❄❄ ❄❄❄❄❄❄❄❄︎"
 topline = "<hr/>"
 footline = "(╯°□°）╯︵ ┻━┻"
 
