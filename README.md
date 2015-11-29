@@ -1,3 +1,3 @@
 # Source for Mindflakes.com
 
-Hugo blog of Nelson Chen
+This is a hugo blog of Nelson Chen.
