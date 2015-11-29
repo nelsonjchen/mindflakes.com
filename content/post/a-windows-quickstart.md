@@ -8,7 +8,7 @@ aliases:
 I paid Swish $25 and $8 shipping for [this](http://www.swish.com/details/devkit/) two months ago. I think I had my
 share donated to the Khan Academy.
 
-![The box](http://i.imgur.com/z7qGS87l.jpg)
+![The box](/images/quickstart-box.jpg)
 
 It's the "Windows Quickstart Kit for Mac Developers". It includes:
 
@@ -42,35 +42,35 @@ too late for that though.
 It's made up of two big pieces. After ripping off the plastic wrapper, there's a windows logo cutout sleeve thing to
 keep the box with a flap closed. It's a pretty retail package for something that is only sold online.
 
-![two pieces](http://i.imgur.com/nCjAZpBl.jpg)
+![two pieces](/images/quickstart-box-two-pieces.jpg)
 
 When you open the box, you have a welcome card with some very basic instructions on the back on the left and some
 coupon card things on the right.
 
-![open box](http://i.imgur.com/FJrX3dRl.jpg)
+![open box](/images/quickstart-box-open-box.jpg)
 
 Beneath the welcome card is a USB drive. It has a Microsoft certificate of authenticity on it,
 so you know its real and has real Microsoft binary bits. There's also a tracking ID on it too. The Microsoft logo is
 embedded in plastic on the back and not some cheap printer job. It's certainly done with style to make the USB drive
 seem to be actually worth something.
 
-![beneath the card](http://i.imgur.com/Zi1uMTEl.jpg)
+![beneath the card](/images/quickstart-box-beneath-the-card.jpg)
 
 On the USB Drive is just an ISO. There are no other files The drive itself isn't bootable. It is formatted with NTFS
 though. At the very least, it's readable on all platforms. It also enumerates as a device of the name Windows 8 Pro
 in system profiler. Quite a Matroska doll. I guess having an ISO is easier than mounting a USB drive in a virtual
 machine in terms of instructional material.
 
-![drive contents](http://i.imgur.com/EU88hUcl.png)
+![drive contents](/images/quickstart-box-drive-contents.jpg)
 
 The cards on the right had keys on them. They're business card sized and feel like them too.
 
-![key cards](http://i.imgur.com/QmrlJ29l.jpg?1)
+![key cards](/images/quickstart-box-key-cards.jpg)
 
 On the back were some keys. Why they felt the need to kill all these trees and grow soy beans to produce the ink for
 printing on said dead tree material to wrap around these numbers is beyond me.
 
-![key codes](http://i.imgur.com/8wNFNm2l.jpg)
+![key codes](/images/quickstart-box-keycodes.jpg)
 
 It took two months for these two alphanumeric strings to get here. The lack of timeliness on delivering these two
 codes and an ISO does not look well for Microsoft's Windows efforts at all. It would take 30 minutes to illegally
