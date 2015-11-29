@@ -3,6 +3,9 @@ title: "My current vagrant setup"
 date: 2013-06-22 20:09:42-07:00
 aliases:
  - /blog/posts/2013/6/22/my-current-vagrant-setup/
+tags:
+  - vagrant
+  - virtualization
 ---
 
 I firmly believe that [Vagrant][1] is the quickest way from nothing to a running and preconfigured development

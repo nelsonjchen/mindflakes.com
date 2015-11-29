@@ -3,6 +3,10 @@ title: "And suddenly, nearly a decade later, a blog appears! Again."
 date: 2013-04-14 22:05:53-07:00
 aliases:
   - /blog/posts/2013/4/14/and-suddenly-nearly-a-decade-later-a-blog-appears-again/
+tags:
+  - meta
+  - blog
+  - because_of_hope
 ---
 
 I'm ashamed to say I've neglected this domain and site for 9 years. In that

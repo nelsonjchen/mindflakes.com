@@ -3,6 +3,10 @@ title: "BeamNG DRIVE on Mac OS X with CrossOver"
 date: 2013-08-03 16:06:37-07:00
 aliases:
   - /blog/posts/2013/8/3/beamng-drive-on-mac-os-x-with-crossover/
+tags:
+  - beamng
+  - wine
+  - mac
 ---
 
 Gotta make this quick. This post will change.

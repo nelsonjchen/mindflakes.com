@@ -3,6 +3,11 @@ title: "Running Windows XP using Libvirt inside Ubuntu inside VMWare Fusion"
 date: 2014-01-06 18:09:02-07:00
 aliases:
   - /posts/2014/1/6/running-windows-xp-using-libvirt-inside-ubuntu-inside-vmware-fusion/
+tags:
+  - ci
+  - jenkins
+  - windows
+  - virtualization
 ---
 
 So I'm investigating running Windows XP inside `libvirt` in Ubuntu on my MacBook for continuous integration testing
