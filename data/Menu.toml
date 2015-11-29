@@ -1,7 +1,3 @@
-[1]
-    Name = "About"
-    URL = "/about"
-
 [2]
     Name = "Posts"
     Title = "Show list of posts"
