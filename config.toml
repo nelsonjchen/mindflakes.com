@@ -2,7 +2,7 @@ baseurl = "https://mindflakes.com/"
 languageCode = "en-us"
 copyright = "© 2015 Nelson Chen"
 title = "Nelson Chen"
-theme = "hyde-y"
+theme = "hugo-octopress"
 
 paginate = 10
 paginatePath = "page"
