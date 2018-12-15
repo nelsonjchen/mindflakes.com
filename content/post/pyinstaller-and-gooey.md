@@ -41,6 +41,6 @@ some CI scripts and configurations.
 
 Demo Project Link: https://github.com/nelsonjchen/gooey-pyinstaller-demo
 
-[gooey]: https://github.com/chriskiehl/Gooey [pyinstaller]:
-https://github.com/pyinstaller/pyinstaller [demo]:
-https://github.com/nelsonjchen/gooey-pyinstaller-demo
+[gooey]: https://github.com/chriskiehl/Gooey
+[pyinstaller]:https://github.com/pyinstaller/pyinstaller 
+[demo]: https://github.com/nelsonjchen/gooey-pyinstaller-demo
