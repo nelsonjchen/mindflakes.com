@@ -2,7 +2,7 @@ baseurl = "https://mindflakes.com/"
 languageCode = "en-us"
 copyright = "© 2015 Nelson Chen"
 title = "Nelson Chen"
-theme = "hyde-y"
+theme = "hugo-octopress"
 
 paginate = 10
 paginatePath = "page"
@@ -17,27 +17,32 @@ post = "posts/:year/:month/:day/:slug/"
 
 [params]
 # You can use markdown here.
-brand = "❄ ❄❄  ❄❄❄ ❄❄❄❄❄ ❄❄❄❄❄❄❄❄︎"
-topline = "<hr/>"
-footline = "(╯°□°）╯︵ ┻━┻"
+searchEngineURL = "https://www.google.com/search"
+sidebarHeader = "Hello there!"
 
-# Sidebar position
-# false, true, "left", "right"
-sidebar = "left"
+sidebarText = """
+This is a site for stuff I write that doesn't fit in 280 characters or simple images.
+"""
 
-# Text for the top menu link, which goes the root URL for the site.
-# Default (if omitted) is "Home".
-home = "Home"
 
 # Select a syntax highight.
 # Check the static/css/highlight directory for options.
 highlight = "default"
 
 [blackfriday]
-angledQuotes = false
-fractions = false
-hrefTargetBlank = false
-latexDashes = true
-plainIdAnchors = true
-extensions = []
-extensionmask = []
+
+
+[[menu.main]]
+Name = "Blog"
+URL = "/"
+weight = -10
+
+[[menu.main]]
+Name = "GitHub"
+URL = "https://github.com/nelsonjchen"
+weight = -5
+
+[[menu.main]]
+Name = "Twitter"
+URL = "https://twitter.com/crazysim"
+weight = 0

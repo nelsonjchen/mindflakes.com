@@ -1,9 +1,8 @@
 sudo: false
 install:
-  - wget -O hugo.tar.gz "https://github.com/spf13/hugo/releases/download/v0.15/hugo_0.15_linux_amd64.tar.gz"
+  - wget -O hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v0.52/hugo_0.52_Linux-64bit.tar.gz"
   - mkdir bin
-  - tar xf ./hugo.tar.gz --strip-components 1 --exclude "*.md" -C bin
-  - mv ./bin/hugo_0.15_linux_amd64 ./bin/hugo
+  - tar xf ./hugo.tar.gz --exclude "*.md" -C bin
   - export PATH="${TRAVIS_BUILD_DIR}/bin:$PATH"
 script: hugo
 deploy:
