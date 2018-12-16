@@ -36,8 +36,8 @@ you put those two together, you get all those above.
 
 The [Gooey PyInstaller Demo][demo] was presented at a DesertPy meetup in August
 of 2018. It's a project showing the development of a simple argument parsing
-script all the way up to a portable GUI. Future improvements to the demo include
-some CI scripts and configurations.  
+script all the way up to a portable GUI. ~~Future improvements to the demo include
+some CI scripts and configurations.~~ *This was completed on 2018-12-15*.
 
 Demo Project Link: https://github.com/nelsonjchen/gooey-pyinstaller-demo
 
