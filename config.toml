@@ -38,6 +38,11 @@ URL = "/"
 weight = -10
 
 [[menu.main]]
+Name = "Projects"
+URL = "/projects"
+weight = -9
+
+[[menu.main]]
 Name = "GitHub"
 URL = "https://github.com/nelsonjchen"
 weight = -5
@@ -46,3 +51,5 @@ weight = -5
 Name = "Twitter"
 URL = "https://twitter.com/crazysim"
 weight = 0
+
+
