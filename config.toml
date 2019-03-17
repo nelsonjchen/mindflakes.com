@@ -28,7 +28,7 @@ This is a site for stuff I write that doesn't fit in 280 characters or simple im
 # Select a syntax highight.
 # Check the static/css/highlight directory for options.
 highlight = "default"
-
+truncate = false
 [blackfriday]
 
 
