@@ -38,6 +38,9 @@ Android Accessibility API offers for third party programs to make things
 more accessible. Unfortunately, there does not seem to be an equivalent
 for iOS.
 
+Kotlin is really easy to read and write. I can see how it's not Scala and 
+is closer to a usable modern Java. It's basically the Swift of Android. 
+
 
 [pac]: https://en.wikipedia.org/wiki/Pointing_and_calling
 [passshout]: https://github.com/nelsonjchen/PassShout/
