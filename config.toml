@@ -24,6 +24,8 @@ sidebarText = """
 This is a site for stuff I write that doesn't fit in 280 characters or simple images.
 """
 
+rss = true
+
 
 # Select a syntax highight.
 # Check the static/css/highlight directory for options.
