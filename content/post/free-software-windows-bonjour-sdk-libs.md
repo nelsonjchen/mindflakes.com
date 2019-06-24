@@ -1,9 +1,11 @@
 ---
 date: 2019-06-01T00:00:00-08:00
 tags:
-- qt
 - azure_pipelines
 - barrier
+- apple
+- bonjour
+- windows
 title: "Non-encumbered Windows Bonjour SDK DLLs and Libs"
 ---
 
