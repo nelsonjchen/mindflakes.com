@@ -13,7 +13,7 @@ I wanted to use [barrier][barrier] which is a tool for sharing mouses between co
 
 So, I noticed on their [GitHub repo][barrier] that the builds for various platforms was inconsistent. OK, maybe I can help fix their CI systems. 
 
-More worringly, there was some Appveyor CI system configured. It was not configured with the `appveyor.yml` method and the 
+More worringly, there was some Appveyor CI system configured. It was not configured with the `appveyor.yml` method and the build process was non-transparent. It was also failing.
 
 My current CI system of choice for open source projects is [Microsoft's Azure Pipelines][ap]. For open source projects on GitHub, they'll provide 10 parallel jobs of *Mac*, Linux, and *Windows*. *Mac* and *Windows* usually only show up as premium options or are severely rate-limited. As far as I can tell, whatever cluster Microsoft has created for their service, it's really not limited by capacity. 
 
