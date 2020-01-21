@@ -22,6 +22,8 @@ sidebarHeader = "Hello there!"
 
 sidebarText = """
 This is a site for stuff I write that doesn't fit in 280 characters or simple images.
+
+<a class="twitter-timeline" href="https://twitter.com/crazysim?ref_src=twsrc%5Etfw">Tweets by crazysim</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 """
 
 rss = true
