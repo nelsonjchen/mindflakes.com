@@ -27,6 +27,7 @@ This is a site for stuff I write that doesn't fit in 280 characters or simple im
 """
 
 rss = true
+googleAnalytics = "UA-52599-1"
 
 
 # Select a syntax highight.
