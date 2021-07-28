@@ -6,6 +6,9 @@ tags:
   - wiki
   - seo
   - rust
+  - cloud_run
+  - bigquery
+  - gcp
 ---
 
 I built this in March, but I figure I'll write about this project better late
