@@ -67,8 +67,17 @@ Google Spreadsheet managing it. The name isn't that great either as it probably
 conflicts with anti-wireless hysteria. Also, it's not like there's an agreed
 upon community of Google Spreadsheet users to share this knowledge with.
 
+I also shamelessly plugged it here but I think the question asker might be
+deceased:
+
+https://stackoverflow.com/questions/57962813/how-to-embed-a-single-google-sheets-cells-text-content-into-a-web-page/68505801#68505801
+
+At least it was viewed 2,000 times over the last two years.
+
 ## Maintenance
 
-Eh, it's on Cloud Run. The cost to keep it running is low as it sometimes isn't
-even running and the Sheets V4 API it uses was recently declared
-"enterprise-stable". It'll be super easy to maintain and cheap to run.
+It's on Cloud Run. The cost to keep it running is low as it sometimes isn't even
+running and the Sheets V4 API it uses was recently declared
+["enterprise-stable"](https://www.protocol.com/enterprise/google-cloud-enterprise-apis).
+Because of this, it will be super easy to maintain and cheap to run. I don't
+expect any more than $2 a month.
