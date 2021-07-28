@@ -100,12 +100,12 @@ was pretty satisfied. However, I kept on thinking about the
 my offer to post a link somewhere on their blog, README, or tweet, the adoption
 wasn't as much as I had hoped.
 
-I had learned about [GH Archive] which is a project that archived every event of
-GitHub since about 2012. I also learned that the project also mirrors its
-archive on [BigQuery][bigquery]. BigQuery allows you to search large datasets
-with SQL. Using BigQuery, I was able to determine that about 2,500 GitHub Wiki
-pages get edited every day. In a week, about 17,000. A month? 66,000 pages. My
-furor at the blocking of indexing increased.
+I had learned about [GH Archive][gh_archive] which is a project that archived
+every event of GitHub since about 2012. I also learned that the project also
+mirrors its archive on [BigQuery][bigquery]. BigQuery allows you to search large
+datasets with SQL. Using BigQuery, I was able to determine that about 2,500
+GitHub Wiki pages get edited every day. In a week, about 17,000. A month? 66,000
+pages. My furor at the blocking of indexing increased.
 
 I decided to throw $45 at the issue and run a big mega-query and queried all of
 GH Archive. Over the lifetime of GH Archive, 4 million pages were edited. I
