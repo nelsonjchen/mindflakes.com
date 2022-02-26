@@ -13,7 +13,7 @@ metaDataFormat = "yaml"
 name = "Nelson Chen"
 
 [permalinks]
-post = "posts/:year/:month/:day/:slug/"
+posts = "posts/:year/:month/:day/:slug/"
 
 [params]
 # You can use markdown here.

@@ -21,4 +21,4 @@
 [6]
     Name = "RSS"
     Title = "RSS"
-    URL = "/index.xml"
+    URL = "/posts/index.xml"
