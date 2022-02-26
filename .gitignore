@@ -1,2 +1,4 @@
 # Default location for output
 public/
+
+.hugo_build.lock
