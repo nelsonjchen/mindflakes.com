@@ -1,1 +1,1 @@
-Here's a list of my projects
+Here's a non-exhaustive list of my projects
