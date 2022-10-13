@@ -26,7 +26,7 @@ https://github.com/simonw/datasette-lite/pull/49
 
 You can run queries through to datasette-lite if you URL hack into it and just get to the query dialog, browsing is kind of a dud at the moment since datasette runs a count(*) which downloads everything.
 
-https://datasette-lite-lab.mindflakes.com/index.html?url=https://datasette-lite-lab.mindflakes.com/sdb/2022-10-02_93eff57de3573985_ca_unclaimed_property.sqlite#/2022-10-02_93eff57de3573985_ca_unclaimed_property?sql=SELECT+*+FROM+records+WHERE+records.owner_name+MATCH+%22Elon+Musk%22+ORDER+BY+CAST%28CURRENT_CASH_BALANCE+AS+FLOAT%29++DESC%3B
+[Elon Musk's CA Unclaimed Property](https://datasette-lite-lab.mindflakes.com/index.html?url=https://datasette-lite-lab.mindflakes.com/sdb/2022-10-02_93eff57de3573985_ca_unclaimed_property.sqlite#/2022-10-02_93eff57de3573985_ca_unclaimed_property?sql=SELECT+*+FROM+records+WHERE+records.owner_name+MATCH+%22Elon+Musk%22+ORDER+BY+CAST%28CURRENT_CASH_BALANCE+AS+FLOAT%29++DESC%3B)
 
 Still, not bad for a $0.42/mo hostable cached CDN'd read-only database. It's on Cloudflare R2, so there's no BW costs.
 
