@@ -1,6 +1,6 @@
 ---
 title: "Colorized-Project: A Project-Color restoration."
-date: 2023-02-1T00:00:00Z
+date: 2023-02-01T00:00:00Z
 tags:
   - intellij
   - kotlin
@@ -18,7 +18,7 @@ After a few months of using IntelliJ without Project-Color, I decided to try to 
 
 Thre are a few rough edges, but it's mostly functional. I've been using it for a few weeks now, and it's been working well. I've also submitted it to the JetBrains plugin repository as well.
 
-It still needs some polish like a nicer icon, and I'd like to add a few more features. 
+It still needs some polish like a nicer icon, and I'd like to add a few more features.
 
 [pc]: https://github.com/nowtilous/Project-Color
 [cp]: https://github.com/nelsonjchen/Colorized-Project

@@ -1,6 +1,6 @@
 ---
 title: "Colorized-Project"
-date: 2023-02-1T00:00:00Z
+date: 2023-02-01T00:00:00Z
 tags:
   - intellij
   - kotlin
