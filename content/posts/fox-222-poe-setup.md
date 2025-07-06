@@ -22,7 +22,7 @@ While of course, one could power a whole house with solar and batteries, I wante
 
 Costco recently [had on sale a small EcoFlow RIVER 3 Plus Portable Power Station](https://slickdeals.net/f/18368635-ecoflow-river-3-plus-wireless-boost-combo-219), which I installed into my home network setup with the power station being next to my router.
 
-It's been wonderful as a UPS.
+It's been wonderful as an UPS!
 
 My setup is a bit peculiar as my Frontier FOX222 ONT is a bit far from the power station, but the power station is next to the router and there is an Ethernet cable running from the ONT to the router. The RIVER 3 is also next to the router.
 
@@ -44,7 +44,7 @@ Requirements:
 * You need a PoE injector that can provide at least 30W. The power supply itself at the end of the chain is rated for 16V at 1.6A but it is unlikely to use the full 1.6A.
   * [TRENDnet Gigabit Power Over Ethernet Plus Injector, PoE+ (30W)](https://amzn.to/3Iubo63)
 * You need a PoE splitter that can provide 16V DC output or something close to it. The FOX222 ONT requires 16V DC input. It will not run with 12V DC input. The 18V DC output is within range and works.
-  * [LINOVISION 30W Gigabit PoE Splitter to DC 5/9/12/18V Output, Wide Voltage Input,](https://amzn.to/4ew8v0C)
+  * [LINOVISION 30W Gigabit PoE Splitter to DC 5/9/12/18V Output, Wide Voltage Input](https://amzn.to/4ew8v0C)
 * The power supply connector has a DIN-like connector on one end. It must be modified so that when there is no AC power, the ONT will still power on and provide data.
   * The modification is easily reversible with a small piece of alumnium foil.
   * ![Modification Image](https://assets.mindflakes.com/fiber-poe/power-supply-plug-modification.webp)
