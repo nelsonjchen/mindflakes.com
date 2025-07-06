@@ -94,6 +94,6 @@ References:
 
 * https://www.instructables.com/I-211M-L-ONT-Enable-Data-While-on-Battery-Power/
   * Provided the image above
-  * Implies that the power supply is happy to take a 12V DC input but this is
+  * Implies that the power supply is happy to take a 12V DC input but this is wrong for the FOX222 ONT, at least.
   * Plug size is wrong, it's 4.0mm x 1.7mm!
   * Only thing right seems to be the modification of the power supply plug with aluminum foil
