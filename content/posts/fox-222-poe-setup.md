@@ -12,8 +12,6 @@ tags:
   - ups
 ---
 
-# Surviving a power outage with fiber ONT and PoE setup (Frontier FOX222)
-
 ![fox222](https://assets.mindflakes.com/fiber-poe/fox222.jpg)
 
 ![power supply](https://assets.mindflakes.com/fiber-poe/CA25U16V2.jpg)
