@@ -1,6 +1,6 @@
 ---
 title: "Surviving a power outage with fiber ONT and PoE setup (Frontier FOX222)"
-date: 2025-07-6T00:00:00Z
+date: 2025-07-06T00:00:00Z
 tags:
   - fiber
   - ont
