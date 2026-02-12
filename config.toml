@@ -1,7 +1,7 @@
 baseURL = "https://mindflakes.com/"
 languageCode = "en-us"
 copyright = "Copyright Nelson Chen"
-title = "mindflakes"
+title = "Nelson Chen's Blog"
 theme = "mindflakes-refresh"
 
 metaDataFormat = "yaml"
