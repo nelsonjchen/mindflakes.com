@@ -47,8 +47,3 @@ weight = -9
 Name = "GitHub"
 URL = "https://github.com/nelsonjchen"
 weight = -5
-
-[[menu.main]]
-Name = "Mastodon"
-URL = "https://mastodon.social/@crazysim"
-weight = 0
