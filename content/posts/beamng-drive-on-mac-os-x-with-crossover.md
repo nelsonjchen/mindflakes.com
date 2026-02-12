@@ -7,6 +7,7 @@ tags:
   - beamng
   - wine
   - mac
+image: "/images/beamng-crossover.jpg"
 ---
 
 **UPDATE** 2015-11-28: Hey BeamNG forum users. These instructions worked for me way

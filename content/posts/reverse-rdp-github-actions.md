@@ -4,6 +4,7 @@ date: 2019-12-07T17:24:55Z
 tags:
   - githubactions
   - devops
+image: "/images/reverse-rdp-desktop.png"
 ---
 
 Ever wonder what the Desktop of the Windows Runners on GitHub Actions looks like?

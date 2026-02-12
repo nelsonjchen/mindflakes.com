@@ -1,6 +1,6 @@
 ---
 title: "Openpilot Replay Clipper"
-date: 2022-10-12T00:00:00Z
+date: 2022-10-12T19:42:00-08:00
 tags:
   - openpilot
   - replay

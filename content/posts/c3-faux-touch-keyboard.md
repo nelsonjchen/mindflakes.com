@@ -1,12 +1,13 @@
 ---
 title: "comma three faux touch keyboard"
-date: 2024-12-13T00:00:00Z
+date: 2024-12-13T22:02:00-08:00
 tags:
   - openpilot
   - replay
   - ch552g
   - comma_ai
   - hardware
+image: "https://github.com/nelsonjchen/c3-touchkey-keyboard/assets/5363/d9617916-2442-4287-b430-709dad173da8"
 ---
 
 # 🦾 comma three Faux-Touch keyboard

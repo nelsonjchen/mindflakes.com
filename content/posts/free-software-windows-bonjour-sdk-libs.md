@@ -1,5 +1,5 @@
 ---
-date: 2019-06-01T00:00:00-08:00
+date: 2019-06-01T19:15:00-08:00
 tags:
 - azure_pipelines
 - barrier

@@ -1,9 +1,10 @@
 ---
 title: "The short lived life of Breakout Bots for Zoom Meetings"
-date: 2020-09-12T00:00:00Z
+date: 2020-09-12T19:42:00-08:00
 tags:
   - zoom
   - sherlock
+image: "https://user-images.githubusercontent.com/5363/92406673-79d2e080-f0ed-11ea-9953-5b7704811d1c.gif"
 ---
 
 With the pandemic happening, it's been tough for many organizations to adapt. We're all supposed to be together! One way organizations have been staying together is by using Zoom Meetings.

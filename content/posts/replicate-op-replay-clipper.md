@@ -1,12 +1,13 @@
 ---
 title: "Replicate.com Openpilot Replay Clipper"
-date: 2023-10-12T00:00:00Z
+date: 2023-10-12T22:28:00-08:00
 tags:
   - openpilot
   - replay
   - replicate
   - openpilot_e2e_long
   - comma_ai
+image: "https://github.com/nelsonjchen/op-replay-clipper/assets/5363/7a9cf016-2012-4acd-90e9-9cdec6bf96c1"
 ---
 
 ![Web capture_8-11-2023_9551_replicate com](https://github.com/nelsonjchen/op-replay-clipper/assets/5363/7a9cf016-2012-4acd-90e9-9cdec6bf96c1)

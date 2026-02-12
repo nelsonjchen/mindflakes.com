@@ -1,6 +1,6 @@
 ---
 title: "Datasette-lite sqlite-httpvfs experiment POC with the California Unclaimed Property database"
-date: 2022-10-11T00:00:00Z
+date: 2022-10-11T20:36:00-08:00
 tags:
   - datasette
   - datasette-lite
@@ -9,6 +9,7 @@ tags:
   - sqlite
   - cloudflare
   - r2
+image: "https://user-images.githubusercontent.com/5363/195697437-2331acfb-fedd-478f-8596-28d6a1809339.png"
 ---
 
 ![screenshot](https://user-images.githubusercontent.com/5363/195697437-2331acfb-fedd-478f-8596-28d6a1809339.png)

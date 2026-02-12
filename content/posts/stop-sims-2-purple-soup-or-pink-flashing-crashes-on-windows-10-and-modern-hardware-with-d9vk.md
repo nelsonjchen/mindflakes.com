@@ -6,6 +6,7 @@ tags:
   - crashes
   - googledoc
   - fix
+image: "/images/sims2-purple-soup.jpg"
 ---
 
 Wrote a guide on how to fix the Purple Soup or Pink Flashing Crashes for

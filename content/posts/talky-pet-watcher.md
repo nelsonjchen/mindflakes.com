@@ -6,6 +6,7 @@ tags:
   - google_gemini
   - vision
   - telegram
+image: "/images/talky-pet-watcher.png"
 ---
 
 ![Cat Watch](/images/talky-pet-watcher.png)

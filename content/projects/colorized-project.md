@@ -4,6 +4,7 @@ date: 2023-02-01T00:00:00Z
 tags:
   - intellij
   - kotlin
+image: "https://user-images.githubusercontent.com/5363/217070588-7faccad0-890c-49df-a119-a0ad261cb9df.png"
 ---
 
 ![screenshot_c235a4a9-429b-4564-bfef-24e4f12bd9a8](https://user-images.githubusercontent.com/5363/217070588-7faccad0-890c-49df-a119-a0ad261cb9df.png)

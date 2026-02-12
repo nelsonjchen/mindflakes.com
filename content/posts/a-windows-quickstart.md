@@ -6,6 +6,7 @@ aliases:
 tags:
   - windows
   - virtualization
+image: "/images/quickstart-box.jpg"
 ---
 
 I paid Swish $25 and $8 shipping for [this](http://www.swish.com/details/devkit/) two months ago. I think I had my

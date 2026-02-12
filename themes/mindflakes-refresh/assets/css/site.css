@@ -3,8 +3,8 @@
 :root {
   --bg: #f8f8f5;
   --text: #1b1d20;
-  --muted: #666d75;
-  --line: #d7dbdf;
+  --muted: #5c6470;
+  --line: #aeb6c0;
   --link: #0b4f87;
   --maxw: 42rem;
 }
@@ -105,29 +105,60 @@ a {
 }
 
 .post-row {
-  padding: 1rem 0 1.1rem;
+  padding: 1.15rem 0 1.25rem;
   border-bottom: 1px solid var(--line);
 }
 
-.post-row h2 {
-  margin-bottom: 0.25rem;
+.post-thumb-link {
+  display: block;
+  margin-bottom: 0.85rem;
 }
 
-.post-row h2 a {
+.post-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid var(--line);
+}
+
+.entry-date {
+  margin-bottom: 0.55rem;
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
   color: var(--text);
-  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
-.post-row h2 a:hover {
+.entry-title {
+  margin-bottom: 0.75rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.12;
+}
+
+.entry-title a {
+  color: var(--link);
   text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.08em;
+}
+
+.entry-excerpt {
+  font-size: 1.12rem;
+  line-height: 1.55;
+  margin-bottom: 1rem;
 }
 
 .meta {
-  color: var(--muted);
+  color: var(--link);
   font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
-  font-size: 0.78rem;
-  letter-spacing: 0.015em;
-  margin-bottom: 0.55rem;
+  font-size: 0.98rem;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.meta a {
+  color: var(--link);
 }
 
 .utility-row {
@@ -137,7 +168,7 @@ a {
 .quiet-link {
   font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
   font-size: 0.84rem;
-  color: var(--muted);
+  color: var(--link);
 }
 
 .pager {

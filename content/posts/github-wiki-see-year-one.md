@@ -1,11 +1,12 @@
 ---
 title: "GitHub Wiki SEE: Search Engine Enablement: Year One"
-date: 2022-10-13T00:00:00Z
+date: 2022-10-13T21:04:00-08:00
 tags:
   - github
   - wiki
   - seo
   - flyio
+image: "https://user-images.githubusercontent.com/5363/195682137-8f9fad93-2a68-4ca0-9c20-035eeba002a1.png"
 ---
 
 It's been near a year since I supercharged [GitHub Wiki SEE][ghwsee] with dynamically generating sitemaps.

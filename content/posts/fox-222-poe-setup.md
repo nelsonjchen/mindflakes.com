@@ -1,6 +1,6 @@
 ---
 title: "Surviving a power outage with fiber ONT and PoE setup (Frontier FOX222)"
-date: 2025-07-06T00:00:00Z
+date: 2025-07-06T18:12:00-08:00
 tags:
   - fiber
   - ont
@@ -10,6 +10,7 @@ tags:
   - frontier
   - ecoflow
   - ups
+image: "https://assets.mindflakes.com/fiber-poe/fox222.jpg"
 ---
 
 ![fox222](https://assets.mindflakes.com/fiber-poe/fox222.jpg)
