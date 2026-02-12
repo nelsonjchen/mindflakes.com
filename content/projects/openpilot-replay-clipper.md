@@ -1,5 +1,5 @@
 ---
-title: "Openpilot Replay Cliper"
+title: "openpilot Replay Cliper"
 date: 2022-10-01
 tags:
   - openpilot
@@ -13,7 +13,7 @@ Replicate: https://replicate.com/nelsonjchen/op-replay-clipper
 
 https://github.com/nelsonjchen/op-replay-clipper/
 
-📽 Capture short ~30 second route clips with the Openpilot UI included, and the route, seconds marker branded into it.
+📽 Capture short ~30 second route clips with the openpilot UI included, and the route, seconds marker branded into it.
 
 Designed to try to encourage more interesting clips to be shared, especially with newer functionality such as "end to end longitudinal control".
 

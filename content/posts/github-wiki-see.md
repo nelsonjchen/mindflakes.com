@@ -145,7 +145,7 @@ me.
 
 *All in all, a pretty fun project. I am really happy with the results.*
 
-* My contributions to the OpenPilot wiki are now indexed.
+* My contributions to the openpilot wiki are now indexed.
 * Everyone else's contributions to their wikis are now indexed as well.
 * I learned a few things or two about writing a Rust web app.
 * I learned a lot about SEO

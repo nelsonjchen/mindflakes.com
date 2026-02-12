@@ -1,5 +1,5 @@
 ---
-title: "Replicate.com Openpilot Replay Clipper"
+title: "Replicate.com openpilot Replay Clipper"
 date: 2023-10-12T22:28:00-08:00
 tags:
   - openpilot

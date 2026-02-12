@@ -1,5 +1,5 @@
 ---
-title: "Openpilot Replay Clipper"
+title: "openpilot Replay Clipper"
 date: 2022-10-12T19:42:00-08:00
 tags:
   - openpilot
@@ -11,11 +11,11 @@ tags:
   - comma_ai
 ---
 
-End to End Longitudinal Control is currently an "extremely alpha" feature in Openpilot that is the gateway to future functionality such as stopping for traffic lights and stop signs.
+End to End Longitudinal Control is currently an "extremely alpha" feature in openpilot that is the gateway to future functionality such as stopping for traffic lights and stop signs.
 
 Problem is, it's hard to describe its current deficiencies without a video.
 
-So I made a tool to help make it easier to share clips of this functionality with a view into what Openpilot is seeing, and thinking.
+So I made a tool to help make it easier to share clips of this functionality with a view into what openpilot is seeing, and thinking.
 
 <video controls>
 <source src="https://user-images.githubusercontent.com/5363/188810452-47a479c4-fa9a-4037-9592-c6a47f2e1bb1.mp4
