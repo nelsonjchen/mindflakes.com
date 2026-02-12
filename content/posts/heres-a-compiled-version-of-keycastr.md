@@ -7,6 +7,8 @@ tags:
   - osx
 ---
 
+> Update: Keycastr is currently maintained at [github.com/keycastr/keycastr](https://github.com/keycastr/keycastr). Please use that repository first.
+
 I just compiled a version of keycastr and put it here since I could not find a precompiled version that's relatively
 new. The release artifacts are available here:
 
