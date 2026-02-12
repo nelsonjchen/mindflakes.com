@@ -1,13 +1,14 @@
-baseurl = "https://mindflakes.com/"
+baseURL = "https://mindflakes.com/"
 languageCode = "en-us"
-copyright = "© 2000+ Nelson Chen"
+copyright = "Copyright Nelson Chen"
 title = "mindflakes"
-theme = "hugo-octopress"
-
-paginate = 10
-paginatePath = "page"
+theme = "mindflakes-refresh"
 
 metaDataFormat = "yaml"
+
+[pagination]
+pagerSize = 10
+path = "page"
 
 [author]
 name = "Nelson Chen"
@@ -16,23 +17,20 @@ name = "Nelson Chen"
 posts = "posts/:year/:month/:day/:slug/"
 
 [params]
-# You can use markdown here.
 searchEngineURL = "https://www.google.com/search"
 sidebarHeader = "Hello there!"
+description = "Nelson Chen's blog and project notes."
 
 sidebarText = """
 This is a site for stuff I write that doesn't fit in 280 characters or simple images.
 """
 
-rss = true
-googleAnalytics = "UA-52599-1"
-
-
-# Select a syntax highight.
-# Check the static/css/highlight directory for options.
-highlight = "default"
 truncate = false
-[blackfriday]
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
 
 
 [[menu.main]]
@@ -54,5 +52,3 @@ weight = -5
 Name = "Mastodon"
 URL = "https://mastodon.social/@crazysim"
 weight = 0
-
-

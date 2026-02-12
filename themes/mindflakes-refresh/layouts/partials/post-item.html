@@ -1,0 +1,5 @@
+<article class="post-row">
+  <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+  <p class="meta">{{ .Date.Format "2006-01-02" }}</p>
+  <p>{{ .Summary | plainify | truncate 230 }}</p>
+</article>

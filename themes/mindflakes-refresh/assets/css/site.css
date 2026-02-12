@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+
+:root {
+  --bg: #f8f8f5;
+  --text: #1b1d20;
+  --muted: #666d75;
+  --line: #d7dbdf;
+  --link: #0b4f87;
+  --maxw: 42rem;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Source Serif 4", Georgia, serif;
+  line-height: 1.65;
+  font-size: 19px;
+}
+
+.shell {
+  width: min(100% - 2rem, var(--maxw));
+  margin-inline: auto;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: #fafaf8;
+}
+
+.header-shell {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 0;
+}
+
+.brand {
+  text-decoration: none;
+  color: var(--text);
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.brand-mark {
+  display: none;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--muted);
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.86rem;
+}
+
+.menu a:hover,
+a:hover {
+  text-decoration: underline;
+}
+
+.site-main {
+  padding: 1.4rem 0 2rem;
+}
+
+.intro {
+  margin-bottom: 1.35rem;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  margin: 0 0 0.45rem;
+}
+
+h1 {
+  font-size: clamp(1.6rem, 3.4vw, 2.05rem);
+}
+
+h2 {
+  font-size: clamp(1.18rem, 2.6vw, 1.38rem);
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--link);
+}
+
+.stream {
+  border-top: 1px solid var(--line);
+}
+
+.post-row {
+  padding: 1rem 0 1.1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.post-row h2 {
+  margin-bottom: 0.25rem;
+}
+
+.post-row h2 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.post-row h2 a:hover {
+  text-decoration: underline;
+}
+
+.meta {
+  color: var(--muted);
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.015em;
+  margin-bottom: 0.55rem;
+}
+
+.utility-row {
+  margin-top: 0.9rem;
+}
+
+.quiet-link {
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+}
+
+.pager-link,
+.pager-disabled,
+.pager-status {
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.82rem;
+}
+
+.pager-link {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.pager-disabled,
+.pager-status {
+  color: var(--muted);
+}
+
+.article {
+  padding-top: 0.25rem;
+}
+
+.article-head {
+  margin-bottom: 1.1rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.85rem;
+}
+
+.prose img,
+.prose video {
+  max-width: 100%;
+  height: auto;
+}
+
+.prose pre {
+  overflow-x: auto;
+  background: #f0f2f4;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.75rem;
+  font-size: 0.88rem;
+}
+
+.prose code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+}
+
+.prose blockquote {
+  margin: 1rem 0;
+  padding: 0.05rem 0 0.05rem 0.9rem;
+  border-left: 3px solid var(--line);
+  color: #434a52;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  margin-top: 2rem;
+}
+
+.footer-shell {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 0 1.3rem;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 700px) {
+  body { font-size: 18px; }
+  .header-shell {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.45rem;
+  }
+}

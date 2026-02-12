@@ -1,0 +1,17 @@
+{{ define "main" }}
+  <section class="shell intro">
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}<div class="page-intro">{{ . }}</div>{{ end }}
+  </section>
+
+  {{ $paginator := .Paginate .Pages.ByDate.Reverse }}
+  <section class="shell stream" aria-label="Content list">
+    {{ range $paginator.Pages }}
+      {{ partial "post-item.html" . }}
+    {{ end }}
+  </section>
+
+  <section class="shell">
+    {{ partial "pagination.html" . }}
+  </section>
+{{ end }}

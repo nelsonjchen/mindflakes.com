@@ -1,0 +1,12 @@
+name = "mindflakes-refresh"
+license = "MIT"
+licenselink = "https://opensource.org/licenses/MIT"
+description = "A refreshed first-party theme for mindflakes.com"
+homepage = "https://mindflakes.com"
+tags = ["blog", "projects", "responsive"]
+features = ["blog", "projects", "lightweight"]
+min_version = "0.152.0"
+
+[author]
+  name = "Nelson Chen"
+  homepage = "https://mindflakes.com"
