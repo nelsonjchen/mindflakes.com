@@ -5,6 +5,7 @@ title = "Nelson Chen's Blog"
 theme = "mindflakes-refresh"
 
 metaDataFormat = "yaml"
+summaryLength = 200
 
 [pagination]
 pagerSize = 10

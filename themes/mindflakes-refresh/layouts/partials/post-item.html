@@ -9,7 +9,49 @@
     </a>
   {{ end }}
 
-  <p class="entry-excerpt">{{ .Summary | plainify | truncate 320 }}</p>
+  {{/* Home/list stream behavior (Simon Willison-esque):
+     - Default: show full content unless the post is very long (auto excerpt).
+     - Explicit excerpt: add <!--more--> in the Markdown to force a snippet.
+     - Override per-post with front matter: home = "full" | "snippet"
+     - When showing a snippet, rewrite fragment-only links (href="#...") to point at the post,
+       so anchors/footnotes work from the homepage stream. */}}
+
+  {{ $homeMode := .Params.home | default "" }}
+  {{ $hasMore := or (in .RawContent "<!--more-->") (in .RawContent "<!-- more -->") }}
+  {{ $autoExcerptMinWords := site.Params.homeAutoExcerptMinWords | default 800 }}
+
+  {{ $showSnippet := false }}
+  {{ if eq $homeMode "snippet" }}
+    {{ $showSnippet = true }}
+  {{ else if eq $homeMode "full" }}
+    {{ $showSnippet = false }}
+  {{ else if $hasMore }}
+    {{ $showSnippet = true }}
+  {{ else if gt .WordCount $autoExcerptMinWords }}
+    {{ $showSnippet = true }}
+  {{ end }}
+
+  {{ if not $showSnippet }}
+    <div class="prose entry-body">
+      {{ .Content }}
+    </div>
+  {{ else }}
+    {{ $summary := .Summary }}
+    {{/* If the snippet includes fragment-only links (footnotes, in-page refs), make them work from the homepage. */}}
+    {{ $summary = $summary | replaceRE "href=\\\"#([^\\\"]+)\\\"" (printf "href=\\\"%s#$1\\\"" .RelPermalink) }}
+    {{ $summary = $summary | replaceRE "href='#([^']+)'" (printf "href='%s#$1'" .RelPermalink) }}
+    <div class="prose entry-body">
+      {{ $summary | safeHTML }}
+    </div>
+
+    {{/* Match Simon's "[... 1,318 words]" affordance (approx remaining words). */}}
+    {{ $summaryWords := countwords ($summary | plainify) }}
+    {{ $remaining := sub .WordCount $summaryWords }}
+    {{ if lt $remaining 0 }}{{ $remaining = 0 }}{{ end }}
+    {{ if gt $remaining 0 }}
+      <p class="entry-more"><a href="{{ .RelPermalink }}">[... {{ lang.FormatNumber 0 $remaining }} words]</a></p>
+    {{ end }}
+  {{ end }}
 
   <p class="meta">
     <span>{{ .Date.Format "3:04 pm" }}</span>

@@ -149,6 +149,12 @@ a {
   margin-bottom: 1rem;
 }
 
+.entry-more {
+  margin: 0 0 1rem;
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+}
+
 .meta {
   color: var(--link);
   font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
