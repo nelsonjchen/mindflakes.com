@@ -25,6 +25,12 @@ There is also a bit of a format war around [filament](https://en.wikipedia.org/w
 
 I like having color options, and color can be functional too. But stock has been rough for a while, even after the holiday season.
 
+That rough stock situation (and the need for a tracker) is really a symptom of how popular Bambu has gotten, especially over the holidays:
+
+![Handy chart showing Bambu popularity spike over the holidays](/images/bbl-handy-chart.webp)
+
+*Source: [Reddit comment](https://www.reddit.com/r/BambuLab/comments/1r01yoo/comment/o4hrtwx)*
+
 Then there is the constant bulk-sale mechanic on the [Bambu Lab Store](https://us.store.bambulab.com/?skr=yes): buy 4+, get a strong discount, buy more, save more. In practice, that falls apart when the combinations you want are never all in stock at the same time.
 
 At the time, the store UI also made this harder than it needed to be. Out-of-stock options were not clearly crossed out, so building a cart felt like guesswork.
