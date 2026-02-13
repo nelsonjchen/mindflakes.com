@@ -6,7 +6,8 @@
   --muted: #5c6470;
   --line: #aeb6c0;
   --link: #0b4f87;
-  --maxw: 42rem;
+  /* Global content width cap (used by `.shell`). */
+  --maxw: 60rem;
 }
 
 * { box-sizing: border-box; }
