@@ -220,6 +220,17 @@ a {
   height: auto;
 }
 
+.prose {
+  /* Prevent long bare URLs (or other unbroken strings) from widening the viewport on mobile. */
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.prose a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 .prose pre {
   overflow-x: auto;
   background: #f0f2f4;
