@@ -49,7 +49,7 @@ At a high level, the tracker monitors store inventory over time, keeps historica
 
 I started with only the [US store](https://us.store.bambulab.com/?skr=yes), then expanded to [EU](https://eu.store.bambulab.com/?skr=yes), [CA](https://ca.store.bambulab.com/?skr=yes), [UK](https://uk.store.bambulab.com/?skr=yes), [AU](https://au.store.bambulab.com/?skr=yes), and [Asia](https://asia.store.bambulab.com/?skr=yes) coverage.
 
-I also reused a stock-quantity verification trick I had learned while documenting [openpilot](https://github.com/commaai/openpilot)'s Toyota security key journey.
+I also reused a stock-quantity verification trick I had learned while documenting [openpilot](https://github.com/commaai/openpilot)'s [Toyota security key journey](https://github.com/optskug/docs).
 
 ## Building it fast (and keeping it moving)
 
