@@ -6,7 +6,7 @@ tags:
   - wiki
   - seo
   - rust
-  - cloud_run
+  - cloud-run
   - bigquery
   - gcp
   - flyio

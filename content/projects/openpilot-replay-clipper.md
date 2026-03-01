@@ -4,8 +4,8 @@ date: 2022-10-01
 tags:
   - openpilot
   - replay
-  - comma_ai
-  - openpilot_e2e_long
+  - comma-ai
+  - openpilot-e2e-long
   - digitalocean
 ---
 

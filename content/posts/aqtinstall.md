@@ -2,7 +2,7 @@
 date: 2019-06-02T22:02:00-08:00
 tags:
 - qt
-- azure_pipelines
+- azure-pipelines
 - barrier
 title: "Fast and lightweight headless Qt Installer from Qt Mirrors: aqtinstall"
 ---

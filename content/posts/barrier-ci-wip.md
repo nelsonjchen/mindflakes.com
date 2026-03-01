@@ -2,7 +2,7 @@
 date: 2019-05-30T22:02:00-08:00
 tags:
 - qt
-- azure_pipelines
+- azure-pipelines
 - barrier
 title: "Barrier CI System WIP"
 ---

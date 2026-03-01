@@ -1,7 +1,7 @@
 ---
 date: 2019-06-01T19:15:00-08:00
 tags:
-- azure_pipelines
+- azure-pipelines
 - barrier
 - apple
 - bonjour

@@ -2,11 +2,11 @@
 title: "Cell Shield"
 date: 2021-07-28T18:47:00-08:00
 tags:
-  - google_spreadsheets
+  - google-spreadsheets
   - markdown
   - html
   - golang
-  - cloud_run
+  - cloud-run
   - bigquery
   - gcp
 ---

@@ -5,8 +5,8 @@ tags:
   - openpilot
   - replay
   - replicate
-  - openpilot_e2e_long
-  - comma_ai
+  - openpilot-e2e-long
+  - comma-ai
 image: "https://github.com/nelsonjchen/op-replay-clipper/assets/5363/7a9cf016-2012-4acd-90e9-9cdec6bf96c1"
 ---
 

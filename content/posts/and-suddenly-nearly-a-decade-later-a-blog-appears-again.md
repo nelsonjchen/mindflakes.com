@@ -6,7 +6,7 @@ aliases:
 tags:
   - meta
   - blog
-  - because_of_hope
+  - because-of-hope
 ---
 
 I'm ashamed to say I've neglected this domain and site for 9 years. In that

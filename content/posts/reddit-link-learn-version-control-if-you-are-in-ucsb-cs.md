@@ -4,7 +4,7 @@ date: 2013-05-07 16:19:28-07:00
 aliases:
   - /blog/posts/2013/5/7/reddit-link-learn-version-control-if-you-are-in-ucsb-cs/
 tags:
-  - best_practice
+  - best-practice
 ---
 
 Here's a comment I wrote on /r/UCSantaBarbara a month ago. Learning Git is

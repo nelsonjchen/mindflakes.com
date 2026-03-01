@@ -3,7 +3,7 @@ title: "Talky Pet Watcher, a cat watching AI"
 date: 2025-02-01T06:08:55Z
 tags:
   - catte
-  - google_gemini
+  - google-gemini
   - vision
   - telegram
 image: "/images/talky-pet-watcher.png"

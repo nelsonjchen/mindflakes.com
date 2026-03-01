@@ -6,8 +6,8 @@ tags:
   - filament
   - duckdb
   - typescript
-  - cloud run
-  - cloudflare pages
+  - cloud-run
+  - cloudflare-pages
 image: "/images/bbltracker.com.png"
 ---
 

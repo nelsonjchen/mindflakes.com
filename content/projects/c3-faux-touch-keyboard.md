@@ -5,7 +5,7 @@ tags:
   - openpilot
   - replay
   - ch552g
-  - comma_ai
+  - comma-ai
   - hardware
 image: "https://github.com/nelsonjchen/c3-touchkey-keyboard/assets/5363/d9617916-2442-4287-b430-709dad173da8"
 ---

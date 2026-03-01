@@ -6,7 +6,7 @@ tags:
   - ont
   - poe
   - setup
-  - power outage
+  - power-outage
   - frontier
   - ecoflow
   - ups

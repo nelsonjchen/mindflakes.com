@@ -5,7 +5,10 @@
       <p class="meta">{{ .Date.Format "January 2, 2006" }}</p>
       {{ with .Params.tags }}
         <p class="meta">
-          {{ range $i, $tag := . }}{{ if gt $i 0 }} · {{ end }}{{ $tag }}{{ end }}
+          {{ range $i, $tag := . }}
+            {{ if gt $i 0 }} · {{ end }}
+            <a href="{{ "/tags/" | relLangURL }}{{ $tag | urlize }}/">{{ $tag | humanize }}</a>
+          {{ end }}
         </p>
       {{ end }}
     </header>

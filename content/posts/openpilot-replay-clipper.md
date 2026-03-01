@@ -7,8 +7,8 @@ tags:
   - docker
   - docker-compose
   - digitalocean
-  - openpilot_e2e_long
-  - comma_ai
+  - openpilot-e2e-long
+  - comma-ai
 ---
 
 End to End Longitudinal Control is currently an "extremely alpha" feature in [openpilot][openpilot] that is the gateway to future functionality such as stopping for traffic lights and stop signs.
