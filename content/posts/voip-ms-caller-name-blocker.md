@@ -22,7 +22,7 @@ This sounds like it should be a normal checkbox somewhere. It is not.
 
 That is all useful. Unfortunately, it is also very number-shaped.
 
-There are callers where the number is not the stable part. The useful part is the caller name, or CNAM, or CNAME, or whatever exact telephony word-shaped object is coming through today.
+There are callers where the number is not the stable part. The useful part is the caller name.
 
 VoIP.ms even has a blog post on [stopping spam calls][voipms-spam-blog] that frames call filtering around numbers, area codes, and anonymous caller status. In the same post, CNAM is described as a way to identify callers before picking up. The [Caller ID wiki page][voipms-caller-id] also describes incoming Caller ID name lookup as an optional per-DID setting that can display a caller name for US and Canadian callers.
 
@@ -36,7 +36,7 @@ So, yes, this is apparently not just me being weird. At least not uniquely weird
 
 VoIP.ms has another feature called Call Hunting. The normal idea is that a DID can try multiple destinations in order. If the first one does not take the call, the next one gets a shot.
 
-That is enough rope to build something useful.
+That turned out to be enough.
 
 So I made a tool that registers to VoIP.ms as a normal SIP endpoint and sits first in a Call Hunting group. It looks at the incoming caller name and then does one of two things:
 
@@ -56,6 +56,8 @@ The original simple version matched the caller name that VoIP.ms delivered in th
 Then reality did the thing where the one field you want is not the field you get.
 
 For the PCH-style caller I cared about, the VoIP.ms-provided name showed up as a generic city/state-style value. That is not useful enough to block on. Meanwhile, T-Mobile Caller ID showed `PCH` for the same number.
+
+Searching around for `PCH` points pretty quickly at Publishers Clearing House, and also at a lot of scam context. [PCH has its own scam-report page][pch-scam-report] saying scammers misuse the PCH name to pretend people won prizes and demand money or personal information. The [FTC also has an alert][ftc-pch-impersonators] specifically about PCH impersonators.
 
 That does not prove T-Mobile and Twilio are using the same database. CNAM is messy enough that I do not want to pretend certainty here. But it did suggest there was a better name source out there than the one I was getting through VoIP.ms.
 
@@ -84,6 +86,10 @@ It is not trying to be a complete PBX. It is a narrow little tool:
 - answer only blocked-name calls
 - play a local disconnected message
 
+It is written in Rust, and I deployed it to my TrueNAS box. Resident memory is around 5 MB, which is very satisfying for something that just needs to sit there, stay registered, and be boring until the wrong call shows up.
+
+I also got a lot of it written with Codex 5.4 Medium. This is a good kind of Codex project: small enough to keep in my head, annoying enough that I did not want to hand-type every SIP-shaped detail myself, and testable enough that I could keep it from becoming pure vibes.
+
 The README has the actual setup steps.
 
 The tests do not need real VoIP.ms credentials either. There is a local fake registrar/integration test path that sends matching and non-matching calls, checks that blocked calls get answered, checks that normal calls get `486 Busy Here`, and verifies RTP audio makes it through. That made this feel a lot less like a pile of SIP hope.
@@ -93,6 +99,8 @@ Anyway, it works for the annoying thing I wanted to stop.
 I still think VoIP.ms should offer caller-name filtering directly. Until then, this tiny weird SIP detour is doing the job.
 
 [cname-blocker-repo]: https://github.com/nelsonjchen/cname_blocker_voip
+[ftc-pch-impersonators]: https://consumer.ftc.gov/consumer-alerts/2023/12/hang-pch-impersonators
+[pch-scam-report]: https://scamreport.pch.com/
 [twilio-lookup]: https://www.twilio.com/docs/lookup/v2-api
 [voip-ms]: https://voip.ms/
 [voipms-caller-id]: https://wiki.voip.ms/article/Caller_ID
