@@ -22,7 +22,7 @@ This sounds like it should be a normal checkbox somewhere. It is not.
 
 That is all useful. Unfortunately, it is also very number-shaped.
 
-There are callers where the number is not the stable part. The useful part is the caller name.
+There are callers where the number is not the stable part. The useful part is the caller ID.
 
 VoIP.ms even has a blog post on [stopping spam calls][voipms-spam-blog] that frames call filtering around numbers, area codes, and anonymous caller status. In the same post, CNAM is described as a way to identify callers before picking up. The [Caller ID wiki page][voipms-caller-id] also describes incoming Caller ID name lookup as an optional per-DID setting that can display a caller name for US and Canadian callers.
 
@@ -35,8 +35,6 @@ So, yes, this is apparently not just me being weird. At least not uniquely weird
 ## The Call Hunting trick
 
 VoIP.ms has another feature called Call Hunting. The normal idea is that a DID can try multiple destinations in order. If the first one does not take the call, the next one gets a shot.
-
-That turned out to be enough.
 
 So I made a tool that registers to VoIP.ms as a normal SIP endpoint and sits first in a Call Hunting group. It looks at the incoming caller name and then does one of two things:
 
