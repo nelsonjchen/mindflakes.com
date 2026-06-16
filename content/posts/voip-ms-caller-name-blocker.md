@@ -22,7 +22,7 @@ This sounds like it should be a normal checkbox somewhere. It is not.
 
 That is all useful. Unfortunately, it is also very number-shaped.
 
-There are callers where the number is not the stable part. The useful part is the caller ID.
+The problem is that spam callers and scammers do not politely stick to one number. They rotate numbers. Blocking one just means the next call comes from another one. The useful part is the caller ID.
 
 VoIP.ms even has a blog post on [stopping spam calls][voipms-spam-blog] that frames call filtering around numbers, area codes, and anonymous caller status. In the same post, CNAM is described as a way to identify callers before picking up. The [Caller ID wiki page][voipms-caller-id] also describes incoming Caller ID name lookup as an optional per-DID setting that can display a caller name for US and Canadian callers.
 
@@ -34,9 +34,9 @@ So, yes, this is apparently not just me being weird. At least not uniquely weird
 
 ## The Call Hunting trick
 
-VoIP.ms has another feature called Call Hunting. The normal idea is that a DID can try multiple destinations in order. If the first one does not take the call, the next one gets a shot.
+VoIP.ms has another feature called Call Hunting. A DID can try multiple destinations in order.
 
-So I made a tool that registers to VoIP.ms as a normal SIP endpoint and sits first in a Call Hunting group. It looks at the incoming caller name and then does one of two things:
+So I made a tool that registers to VoIP.ms as a SIP endpoint and sits first in a Call Hunting group. It checks the incoming caller name and then does one of two things:
 
 - If the caller does not match the block list, it rejects the call with `486 Busy Here`.
 - If the caller matches the block list, it answers, plays SIT tones plus a disconnected-style message, and hangs up.
@@ -45,21 +45,21 @@ The `486 Busy Here` part is the whole trick. For normal calls, VoIP.ms treats th
 
 For blocked calls, the blocker answers the call. Once it answers, the hunt stops. My actual phone never rings.
 
-It's a bit of a hack, but it is a nice kind of hack. No inbound port forwarding. No PBX to babysit. Just a small SIP endpoint with one job.
+It is a hack. No inbound port forwarding. No PBX.
 
 ## Why Twilio Lookup got involved
 
-The original simple version matched the caller name that VoIP.ms delivered in the SIP call.
+The first version matched the caller name that VoIP.ms sent in the SIP call.
 
-Then reality did the thing where the one field you want is not the field you get.
+Then the field I wanted was not the field I got.
 
 For the PCH-style caller I cared about, the VoIP.ms-provided name showed up as a generic city/state-style value. That is not useful enough to block on. Meanwhile, T-Mobile Caller ID showed `PCH` for the same number.
 
-Searching around for `PCH` points pretty quickly at Publishers Clearing House, and also at a lot of scam context. [PCH has its own scam-report page][pch-scam-report] saying scammers misuse the PCH name to pretend people won prizes and demand money or personal information. The [FTC also has an alert][ftc-pch-impersonators] specifically about PCH impersonators.
+Searching `PCH` gets you Publishers Clearing House, plus warnings about PCH impersonator scams. [PCH has its own scam-report page][pch-scam-report] saying scammers misuse the PCH name to pretend people won prizes and demand money or personal information. The [FTC also has an alert][ftc-pch-impersonators] specifically about PCH impersonators.
 
-That does not prove T-Mobile and Twilio are using the same database. CNAM is messy enough that I do not want to pretend certainty here. But it did suggest there was a better name source out there than the one I was getting through VoIP.ms.
+I do not know where T-Mobile got that name, and I am not claiming Twilio uses the same source. VoIP.ms was not giving me the useful label, so I added optional Twilio Lookup.
 
-So I added optional [Twilio Lookup][twilio-lookup] support. If configured, the blocker can ask Twilio for the caller name and match against that instead. If Twilio does not return a useful name or the lookup fails, the call is allowed through.
+If configured, the blocker can ask [Twilio Lookup][twilio-lookup] for the caller name and match against that instead. If Twilio does not return a useful name or the lookup fails, the call is allowed through.
 
 The matching itself is intentionally boring:
 
@@ -75,26 +75,19 @@ The project is here:
 
 https://github.com/nelsonjchen/cname_blocker_voip
 
-It is not trying to be a complete PBX. It is a narrow little tool:
+It is not a PBX. It registers outbound to VoIP.ms, checks caller name information, optionally asks Twilio Lookup, returns `486 Busy Here` for normal calls, and only answers calls it wants to block.
 
-- register outbound to VoIP.ms
-- inspect caller name information
-- optionally use Twilio Lookup
-- let normal calls continue through Call Hunting
-- answer only blocked-name calls
-- play a local disconnected message
+It is written in Rust, and I deployed it to my TrueNAS box. Resident memory is around 5 MB.
 
-It is written in Rust, and I deployed it to my TrueNAS box. Resident memory is around 5 MB, which is very satisfying for something that just needs to sit there, stay registered, and be boring until the wrong call shows up.
-
-I also got a lot of it written with Codex 5.4 Medium. This is a good kind of Codex project: small enough to keep in my head, annoying enough that I did not want to hand-type every SIP-shaped detail myself, and testable enough that I could keep it from becoming pure vibes.
+Codex 5.4 Medium helped write a lot of it.
 
 The README has the actual setup steps.
 
-The tests do not need real VoIP.ms credentials either. There is a local fake registrar/integration test path that sends matching and non-matching calls, checks that blocked calls get answered, checks that normal calls get `486 Busy Here`, and verifies RTP audio makes it through. That made this feel a lot less like a pile of SIP hope.
+The tests do not need real VoIP.ms credentials either. There is a local fake registrar/integration test path that sends matching and non-matching calls, checks that blocked calls get answered, checks that normal calls get `486 Busy Here`, and verifies RTP audio makes it through.
 
 Anyway, it works for the annoying thing I wanted to stop.
 
-I still think VoIP.ms should offer caller-name filtering directly. Until then, this tiny weird SIP detour is doing the job.
+I still think VoIP.ms should offer caller-name filtering directly. Until then, this does the job.
 
 [cname-blocker-repo]: https://github.com/nelsonjchen/cname_blocker_voip
 [ftc-pch-impersonators]: https://consumer.ftc.gov/consumer-alerts/2023/12/hang-pch-impersonators
