@@ -7,9 +7,13 @@ tags:
   - gcp
   - wireless
   - homelab
+  - ai-assisted
+  - codex
 ---
 
 I finally wrote up my notes on getting a modern [Cisco Catalyst 9800-CL](https://www.cisco.com/c/en/us/products/wireless/catalyst-9800-cl-wireless-controller-cloud/index.html) running on [Google Cloud Platform](https://cloud.google.com/).
+
+This was my first time using Codex to bring up a GCP setup from scratch. I supplied the goals and directed the work; Codex did essentially all of the technical investigation, image modifications, and scripting to get the controller working. Codex also drafted this post.
 
 The short version is that this was much more of a fight than I expected.
 
@@ -17,7 +21,9 @@ Cisco's [public GCP-facing material](https://www.cisco.com/c/en/us/products/coll
 
 That is a pretty bad situation if what you actually want is a modern WLC on GCP. The version I actually worked from was `17.15.04d`, which Cisco's software portal lists with a release date of `19-Dec-2025`. Cisco's public guidance still points at a path that appears stuck on software families from years ago, and it was not a good starting point for getting a current controller running.
 
-The current downloadable image path is possible, but it turned out to involve more image surgery and boot-path archaeology than I had hoped for.
+Getting a newer image directly from Cisco's site did not end the fight. That image's GCP support was broken too, and Codex ended up ripping into it to figure out what the hell was going wrong. Under my direction, it investigated the boot path and worked through the image modifications needed to get the controller running. This was much more than asking it to write a few deployment commands.
+
+I have to give Codex credit for sticking with that stuff. Ripping apart a broken appliance image is nasty, patient trial-and-error work, especially when GCP is involved. Finding out whether a change worked can take minutes, and getting somewhere can take many attempts. Codex also configured serial logging and read through the serial logs to figure out what was happening during boot and what to try next. It kept working through that slow feedback loop. That persistence impressed me as much as the technical work itself.
 
 I put the actual handoff-style guide here:
 
