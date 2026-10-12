@@ -8,7 +8,13 @@ tags:
   - reverse-engineering
   - games
   - tas
+  - ai-assisted
+  - codex
 ---
+
+**AI involvement:** Codex, using the Luna models available at the time, did essentially all of the technical investigation and coding described here, including the game analysis and viewer changes. I supplied the ideas and directed the work. AI also drafted this post.
+
+I chose Luna because Artificial Analysis's comparisons made it look promising for cost per task. I had little else to go on. In retrospect, that choice may have left the agents spinning their wheels: a cheaper model can take more attempts to finish the work, which could wipe out the savings.
 
 I got curious about whether a Crazy Taxi tool-assisted speedrun could be slightly faster with one fewer passenger.
 
@@ -28,7 +34,7 @@ Picking up a passenger adds time to the Arcade clock. A successful delivery can 
 
 The symbol-rich Android release was useful for investigating this. Its code shows a distance-based time allowance at pickup, with a multiplier that changes as play goes on, plus a delivery-rank bonus at drop-off.
 
-In the calculation in my notes, a proposed three-passenger route adds about 12.56 fewer seconds than the four-passenger reference route. That comparison assumes the early-game multiplier and the best delivery judgement for each passenger.
+In Codex's calculation recorded in the project notes, a proposed three-passenger route adds about 12.56 fewer seconds than the four-passenger reference route. That comparison assumes the early-game multiplier and the best delivery judgement for each passenger.
 
 That is less added game time, which made the idea interesting enough to investigate further. It is not a measured 12.56-second improvement in a TAS. Driving, passenger animations, and when the clock actually advances still have to be accounted for.
 
@@ -40,7 +46,7 @@ The choice is latched when the passenger event activates. Waiting until boarding
 
 That makes route planning more interesting. Reaching a passenger at a different time can select a different destination, which changes the trip and the clock allowance. Picking three convenient dots on a map is not enough.
 
-To look at this spatially, I forked the [noclip.website](https://noclip.website/) viewer and loaded the GameCube Arcade city map with the extracted pedestrian pickup locations overlaid on it. Credit to noclip.website for the viewer; my additions turned it into a research map for this passenger-routing rabbit hole. It is much easier to reason about a side-street pickup when I can actually see where it sits in the city.
+To look at this spatially, I had Codex adapt a fork of the [noclip.website](https://noclip.website/) viewer to load the GameCube Arcade city map with the extracted pedestrian pickup locations overlaid on it. Credit to noclip.website for the viewer; Codex implemented the additions under my direction to turn it into a research map for this passenger-routing rabbit hole. It is much easier to reason about a side-street pickup when I can actually see where it sits in the city.
 
 The extracted passenger records match the Android reference records, which is useful evidence for understanding the data. It does not prove that every timing behavior carries over to the GameCube executable.
 
