@@ -8,9 +8,12 @@ tags:
   - openscad
   - 3d-printing
   - codex
+  - ai-assisted
 ---
 
 I made an [unofficial MakerWorld PMM OpenSCAD reference][pmm-reference-repo].
+
+I put this reference together with the assistance of Codex. I supplied the idea and directed the work; Codex did the research, coding, and documentation, including collecting the PMM rules and building the font index. Codex also drafted this post.
 
 The short version is that I wanted [Codex][openai-codex] to help me make MakerWorld-customizable [OpenSCAD][openscad] models, and I did not want it guessing from old forum posts, UI behavior, and whatever I happened to remember at 1 AM.
 
@@ -30,9 +33,9 @@ For a human, scattered docs are annoying. For a coding agent, they are a great w
 
 I do not want an agent inventing `// preview[...]` as a PMM feature. I want it to know that `// color` is a thing, `// font` is a thing, `mw_plate_N()` is a thing, and `default.svg` is not just some random example filename.
 
-So I made a reference.
+So I had Codex collect those rules into a reference under my direction.
 
-## What I collected
+## What the reference covers
 
 The repo is basically a practical map of the PMM OpenSCAD surface:
 
@@ -63,7 +66,7 @@ svg_file = "default.svg";
 
 None of that is hard once you know it. The problem is making sure the agent knows it before it starts "helping."
 
-I also made a [PMM font index][pmm-font-index]. It has 1881 MakerWorld PMM font families and 8267 exact PMM font strings. This got more elaborate than I expected, but fonts are exactly the kind of thing where an agent can confidently choose something that works on your machine and then does not work where the model actually runs.
+I also had Codex build a [PMM font index][pmm-font-index]. It has 1881 MakerWorld PMM font families and 8267 exact PMM font strings. This got more elaborate than I expected, but fonts are exactly the kind of thing where an agent can confidently choose something that works on your machine and then does not work where the model actually runs.
 
 ## Why agent-first
 
