@@ -8,9 +8,14 @@ tags:
   - cli
   - json
   - automation
+  - ai-assisted
 ---
 
 I made a small [Rust CLI that prints Codex status as JSON][codex-status-repo].
+
+I built this tool with the assistance of Codex. I supplied the idea and directed the work; Codex did the technical investigation and implementation. Codex also drafted this post.
+
+**Update, October 11, 2026: this is now mostly a historical workaround for my Codex app workflow.** The app now gives conversations a built-in way to read usage limits, so I no longer need this helper for that purpose. For manual checks, there is also the [usage dashboard and the CLI's `/status` command][codex-pricing]. That does not make every use of a standalone JSON tool obsolete, but it fills the gap that motivated mine. The rest of this post describes the workaround as it stood in June.
 
 The short version is that I wanted Codex conversations to know my account, model, and quota state without opening the interactive TUI and reading `/status` like a person.
 
@@ -75,7 +80,7 @@ That was enough to unblock the thing I wanted.
 
 ## The less cursed version
 
-A few days later, I switched the default backend to Codex's [app-server][codex-app-server-docs].
+A few days later, I had Codex switch the default backend to Codex's [app-server][codex-app-server-docs].
 
 That is a much better source than scraping the TUI. The tool starts:
 
