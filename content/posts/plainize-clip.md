@@ -9,9 +9,12 @@ tags:
   - appkit
   - reverse-engineering
   - codex
+  - ai-assisted
 ---
 
 I made [Plainize Clip][plainize-clip-repo], a tiny macOS app that cleans the current clipboard and quits.
+
+I built Plainize Clip with the assistance of Codex. I supplied the idea and directed the work; Codex did the reverse engineering and implementation. Codex also drafted this post.
 
 The short version is that I still wanted the old [Plain Clip][plain-clip] shape: copy weird text, launch the app, paste something boring.
 
@@ -48,9 +51,7 @@ The [GitHub releases][plainize-clip-releases] are unsigned, so macOS does the us
 
 ## Reverse-engineering because Codex made it cheap
 
-I also ended up reverse-engineering the old app more than I normally would have.
-
-[Codex][codex] let me reverse-engineer stuff I otherwise would not have lifted a finger for. The local `plain-clip-re` workspace became the notebook for it: static inventory, Ghidra headless exports, behavior notes, and then a recovered map of what the old app actually did.
+I had [Codex][codex] reverse-engineer the old app under my direction. That made it practical to investigate behavior I otherwise would not have lifted a finger for. Codex recorded its investigation in the local `plain-clip-re` workspace: static inventory, Ghidra headless exports, behavior notes, and then a recovered map of what the old app actually did.
 
 The useful bits were not mysterious. They were just tedious:
 
@@ -61,9 +62,9 @@ The useful bits were not mysterious. They were just tedious:
 - after cleaning, it replaces the pasteboard with string-only content
 - the pipeline handles line endings, whitespace, hard wraps, blank lines, smart quotes, tabs, Unicode normalization, and ASCII conversion
 
-That was enough to rebuild the behavior intentionally instead of just making "a clipboard cleaner, probably."
+Codex used those findings to implement the replacement under my direction, with the old app's behavior as a reference instead of just making "a clipboard cleaner, probably."
 
-Plainize Clip is still a separate implementation. I did not reuse the old app's code. The reverse-engineering work was mostly there to answer boring compatibility questions without relying on memory.
+Plainize Clip is still a separate implementation and does not reuse the old app's code. The reverse-engineering work was mostly there to answer boring compatibility questions without relying on memory.
 
 ## The cleanup switches
 
