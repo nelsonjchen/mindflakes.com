@@ -8,9 +8,13 @@ tags:
   - rust
   - voip-ms
   - telephony
+  - ai-assisted
+  - codex
 ---
 
 I made a small [Rust VoIP.ms CNAME blocker][cname-blocker-repo].
+
+I built this caller-name blocker with the assistance of Codex, using GPT-5.4 with medium reasoning effort. I supplied the idea and directed the work; Codex did essentially all of the technical investigation and coding. AI also drafted this post.
 
 The short version is that I wanted to block a caller by name instead of by phone number.
 
@@ -74,8 +78,6 @@ It is not a PBX. It registers outbound to VoIP.ms, checks caller name informatio
 I expect this exact piece of software to be useful mostly for myself, but I do hope people use the code as a starting point. After I posted it in the VoIP.ms thread, [someone asked][voipms-forum-press-1] about using it for a simple "press 1 to continue" style flow instead of dropping the call. I do not need that, and the code is not designed for it, but it is not a ridiculous direction. With an agent like [Codex][openai-codex] pointed at the code and tests, that kind of custom call flow seems very reachable. In a very small and specific way, this program is already acting like a focused PBX.
 
 It is written in Rust, and I deployed it to my TrueNAS box. Resident memory is around 5 MB.
-
-Codex 5.4 Medium helped write a lot of it.
 
 The README has the actual setup steps.
 
