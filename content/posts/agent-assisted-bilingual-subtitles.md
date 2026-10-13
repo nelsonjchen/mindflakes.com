@@ -8,83 +8,40 @@ tags:
   - agents
   - localization
   - tooling
+  - ai-assisted
+  - codex
 ---
 
-I made some agent-assisted subtitle tools for group watches.
+I wanted English and Chinese subtitles on screen at the same time for a group watch. Some people read one language faster, some read the other faster. Switching tracks does not help everyone follow along together.
 
-The short version is that I wanted one subtitle track with English and Chinese at the same time. Some people read one language faster, some read the other faster, and switching subtitle tracks is not a group activity.
+I built the subtitle tools with the assistance of [Codex][codex]. I supplied the ideas and directed the work; Codex did the investigation and implementation, including the merging, timing alignment, and review reports. Codex also drafted this post.
 
-No repo link for this one. The subtitle files are not mine to redistribute, and the interesting part is the workflow anyway.
+## Matching the tracks
 
-## The group watch problem
+The first script paired English and Chinese cues by their cue numbers, kept the English timestamps, and stacked the text. That worked for one pair of files, but it depended on both tracks numbering their cues the same way. Missing dialogue or extra signage cues can break that assumption.
 
-The simple version sounds extremely simple:
+Another pair needed more work. The timing difference between the tracks changed over the course of the movie, so shifting the whole Chinese track by a fixed number of seconds would not line it up.
 
-1. Take an English subtitle file.
-2. Take a Chinese subtitle file.
-3. Put both lines into one subtitle cue.
-4. Watch the thing.
+I had Codex adapt the script to use the English track as the timing source:
 
-Unfortunately, subtitle files are not just text. They are text, cue numbers, timestamps, line breaks, release-specific offsets, missing cues, extra signage cues, and sometimes a drift that slowly changes across the whole movie.
+- Estimate the Chinese timing offset in local windows, then smooth those offsets.
+- Remap the Chinese cues onto the English timeline.
+- Merge Chinese text into the nearest overlapping English cue.
+- Keep Chinese-only cues as separate events.
+- Write a merged `.srt` and an alignment report.
 
-The first version I tried was basically a mux. If the English and Chinese files had matching cue numbers, use the English timestamp and stack the text together.
+## Checking the result
 
-That worked well enough for one case. It was also obviously fragile.
+The report listed low-confidence merges, Chinese-only cues, English cues without matching Chinese text, and the local offset anchors. That gave me timestamps to check instead of having to inspect the entire subtitle file.
 
-## The annoying version
+I generated a track, skimmed the report, and spot-checked the questionable sections. When something looked wrong, I asked Codex to adjust the matching or improve the report, then generated it again.
 
-The more interesting case had two subtitle tracks that did not line up with one fixed offset.
+Having Codex write and revise the scripts made this practical for a couple of group watches. I could ask for a change after trying the output with the actual files.
 
-If it were just "add 12 seconds to every Chinese cue," this would not be worth writing about. But the offset changed over time. It started around one value and gradually moved toward another.
+If you want to try it, give your coding agent both subtitle files and specify which track has the correct timing. Ask for the merged output and a report of uncertain matches and unmatched cues. Check those against the video before watching with everyone.
 
-So the script got more specific:
+No repo link here. The subtitle files are not mine to redistribute.
 
-- parse both subtitle files
-- treat the English track as the timing source
-- search for the best Chinese offset in local windows
-- smooth those offsets
-- remap Chinese cues onto the English timeline
-- merge Chinese text into the nearest overlapping English cue
-- preserve Chinese-only cues as their own events
-- write an alignment report for things that looked suspicious
+It worked for our group watch. We had a good time, and everybody could follow along.
 
-The report was the important part. I did not need the script to pretend everything was perfect. I needed it to tell me where to look.
-
-The useful output was not just the merged `.srt`. It was also a short review list:
-
-- low-confidence merges
-- Chinese-only cues
-- English cues with no matching Chinese text
-- local offset anchors
-
-That made the workflow tolerable. Generate, skim the report, spot-check the weird timestamps, adjust the heuristics if needed, and regenerate.
-
-## Where agents helped
-
-This is exactly the kind of small, specific tool where agents are useful.
-
-I did not need a general subtitle product. I did not need a GUI. I did not need a library that handles every movie ever made. I needed one script for one group watch, and then a slightly better script for a different subtitle mess.
-
-An agent can help make that cheap enough to bother with.
-
-The first pass can be dumb:
-
-```text
-same cue number -> same timestamp -> Chinese line + English line
-```
-
-Then the next pass can be less dumb:
-
-```text
-local timing windows -> estimated offset -> remapped cues -> overlap match -> review report
-```
-
-The agent also made it easier to keep the code disposable. I did not have to lovingly design a subtitle framework. I could just ask for the thing I needed, run it, look at the bad spots, and ask for a better report.
-
-If you want to do the same thing, point [Codex][codex], [Claude Code][claude-code], or [Google Antigravity][google-antigravity] at this post and your own subtitle files. The post is basically the spec: one timing source, one translated track, local offset search, merged output, and a review report. That is enough for an agent to build the throwaway script for your specific case.
-
-Anyway, it worked for the group watch. We had a very good time, nobody was lost or left behind!
-
-[claude-code]: https://code.claude.com/docs/en/overview
 [codex]: https://developers.openai.com/codex/
-[google-antigravity]: https://antigravity.google/
