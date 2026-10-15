@@ -8,17 +8,21 @@ tags:
   - openpilot
   - hardware
   - documentation
+  - ai-assisted
+  - codex
 ---
 
 One of the things I keep working on is the [unofficial comma hardware documentation][docs]. Somebody has a broken device, people help investigate, and eventually there is an answer somewhere in Discord.
+
+I wrote the early documentation by hand. More recently, I've been using Codex to crawl through Discord discussions for updates, write additions, and straighten out existing material, under my direction. The repairs and reported results come from the community members credited in the docs. Codex also drafted this blog post.
 
 Then somebody else has the same problem.
 
 Discord is an annoying place for the answer to live. Finding the right conversation is work, the useful detail might be several messages away from the original question, and a person searching the web may never find it at all.
 
-So I keep trying to get those cases into a public document that search engines and AI assistants can read. Especially AI assistants, because people already ask them how to fix things. I want the actual repair knowledge to be available when somebody asks about their broken comma.
+I hate walled gardens, and Discord is a bit of one. It is the same frustration that led me to build [GitHub Wiki SEE]({{< relref "github-wiki-see.md" >}}) back in 2021: people were putting useful information into GitHub wikis, but GitHub was blocking search engines from indexing it. I built a mirror to make those pages findable. Getting repair knowledge out of Discord and onto the public web comes from the same impulse.
 
-That is a big part of why I do it this way. An answer buried in Discord is not much help if the tool somebody is asking cannot get to it. A public document gives it something to find, read, and point back to. It does not guarantee a correct answer, but at least the specific cases and their limitations are there to work from.
+So I keep trying to get those cases into a public document that search engines and AI assistants can read. Especially AI assistants, because people already ask them how to fix things. I want the actual repair knowledge to be available when somebody asks about their broken comma.
 
 ## The useful part is the follow-up
 
