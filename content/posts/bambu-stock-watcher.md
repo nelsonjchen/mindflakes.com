@@ -8,10 +8,15 @@ tags:
   - typescript
   - cloud-run
   - cloudflare-pages
+  - ai-assisted
+  - google-antigravity
+  - codex
 image: "/images/bbltracker.com.png"
 ---
 
 I've been running a [Bambu Lab](https://bambulab.com/) Store filament tracker at [bbltracker.com](https://bbltracker.com/).
+
+I built this tracker with the assistance of Google Antigravity and Codex. I supplied the ideas and directed the work; the agents did essentially all of the technical investigation and coding. AI also drafted this post.
 
 ![bbltracker dashboard](/images/bbltracker.com.png)
 
@@ -53,7 +58,7 @@ I also reused a stock-quantity verification trick I had learned while documentin
 
 ## Building it fast (and keeping it moving)
 
-I used a lot of [Google Antigravity](https://antigravity.google/) while building this. [Web scraping](https://en.wikipedia.org/wiki/Web_scraping) is tedious work, and [large language models](https://en.wikipedia.org/wiki/Large_language_model) helped a lot with iteration speed and the constant tweaks.
+I started with [Google Antigravity](https://antigravity.google/), then moved to [Codex](https://openai.com/codex/) later. During the transition, I used a mix of both. Web scraping is tedious work, and having the agents write and revise the code made the constant tweaks easier to keep up with.
 
 The codebase is not pretty in every corner, but LLMs have made it very workable to maintain and improve continuously.
 
