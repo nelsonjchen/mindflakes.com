@@ -1,5 +1,5 @@
 ---
-title: "My wobbly VHS pipeline"
+title: "My wobbly VHS-Decode pipeline"
 date: 2026-09-13T10:34:51-07:00
 draft: false
 slug: "my-wobbly-vhs-pipeline"
@@ -8,13 +8,16 @@ tags:
   - preservation
   - codex
   - automation
+  - ai-assisted
 ---
 
 I wanted to recover some VHS tapes. Somehow this turned into tapping a signal inside a Sony VCR, putting capture cards in a computer from the junk pile at work, spreading the processing across three machines, and asking Codex to help redesign an amplifier PCB.
 
-There is a reason I went this way. The usual way to digitize VHS is to connect a VCR's video and audio outputs to a capture device and record them on a computer. The VCR reads the tape and turns its signal into a picture before the computer ever sees it.
+I built this VHS pipeline with the assistance of Codex. I supplied the ideas, directed the work, and handled the physical hardware; Codex did essentially all of the technical investigation and custom coding for my setup. The pipeline builds on the existing projects credited below. Codex also drafted this post.
 
-For better results, you can look for a nicer VCR with a built-in time base corrector, or TBC, which helps correct playback timing errors that make the picture wobble. Unfortunately, the decks I was looking at were $$$. With ancient media having a moment again, it feels like everybody wants the same aging hardware. The expensive stuff is, well, expensive.
+The usual way to digitize VHS is to connect a VCR's video and audio outputs to a capture device and record them on a computer. The VCR reads the tape and turns its signal into a picture before the computer ever sees it.
+
+For better results, you can look for a nicer VCR with a built-in time base corrector, or TBC, which helps correct playback timing errors that make the picture wobble. Unfortunately, the decks I was looking at were $$$. With ancient media having a moment again, it feels like everybody wants the same aging hardware.
 
 [VHS-Decode](https://github.com/oyvindln/vhs-decode) offers a more hardcore route. You still need a working VCR, but you tap the RF signal inside it, near the tape-head amplifier, before the machine turns it into ordinary video. This is not the antenna connector on the back. Suitable capture hardware records that earlier signal, and the computer reconstructs the picture, including time base correction, in software.
 
@@ -22,11 +25,9 @@ That sounded pretty appealing: use an ordinary VCR, spend less on a fancy deck, 
 
 I first heard about VHS-Decode about two years ago. I lacked the hardware, time, and initiative to really start. Codex helped me get past a lot of those hurdles. I drove the whole setup through Codex, right down to configuring Ubuntu on the capture machine. It was involved from the beginning, not something I added after getting everything working.
 
-To be clear about who wrote what: Codex wrote a lot of the custom code for this setup. I directed and oversaw the work, made the decisions, and handled the physical hardware. When I call these “my scripts” or “my pipeline,” I mean the setup I am building and responsible for, not that I personally typed all the code.
-
 The pipeline repo has an `AGENTS.md` with instructions for Codex and a `journal.md` where we take notes as we go. That journal now runs through months of experiments, failures, and procedures that apparently needed another procedure.
 
-It is still a constant WIP. But looking back through those notes, there is an actual journey from “can I get a signal?” to something that helps me understand and organize the tapes too.
+The setup is still a work in progress. The notes trace how it grew from “can I get a signal?” into something that helps me understand and organize the tapes too.
 
 ## First, get a picture
 
@@ -74,6 +75,10 @@ So my rule is to capture the whole tape first and analyze it afterward. I do not
 
 This became one of the most useful parts of having Codex involved. It has been great at scene analysis, helping with transcription and translation, and writing up what is happening on the tapes. It can help sift the home-video sections out of recorded TV programming and leave a map of the recording alongside the watchable files.
 
+The tapes mix Cantonese, Mandarin, and English, and we found some useful differences between automatic speech recognition (ASR) models. Local Qwen3-ASR 1.7B was a particularly good find for Cantonese and also produced useful Mandarin drafts. On one mixed tape, `gemini-3.5-transcribe-preview` struggled with the noisy Cantonese but recovered English television dialogue and word timing that helped fill gaps.
+
+Codex coordinates those ASR passes, compares their output, and helps turn the results into transcripts and translated subtitles. Trying different models on the actual recordings has been more useful than assuming one model will handle every language and every stretch of old tape equally well.
+
 The review procedures grew around that work: frames throughout the recording, extra scene-change samples, and moving picture with audio around anything ambiguous. I want to know what was actually checked, not just get a confident summary based on three screenshots.
 
 Codex also helped read the wonky Chinese handwriting on the old labels. Some of it is barely readable scratches at this point. A plausible reading and translation can give me a starting point, and the footage can help make sense of it. Uncertain characters need to stay marked as guesses. The same goes for difficult speech in a transcript.
@@ -92,13 +97,19 @@ Yellow means “could be better.” Green is reserved for what I would call a pe
 
 That connects the digital notes back to the object in front of me. Codex can help inspect a tape, write up the findings, and print the labels. If the box and cassette get separated, I can still identify both.
 
-There is also an M5Stack Atom Lite, a little ESP32 device with a built-in infrared transmitter, for sending the VCR commands like play, stop, and rewind. It cost me $14. I 3D-printed a small stand for cents to hold it up against the VCR, aimed at its infrared receiver. So the automation can press the remote buttons too, although sending an IR command is not proof the VCR obeyed it.
+## Codex can press Play
 
-For that, I also monitor the VCR with a power meter. The deck draws different amounts of power when the tape transport is active and when it is stopped with a tape loaded. The workflow watches those measured states rather than assuming an IR command worked. To rewind, it sends Stop, checks that the deck has settled, sends Rewind, then watches for sustained activity followed by a stable return to the stopped state. Those checks are specific to this VCR and setup.
+This is one of my favorite parts of the setup. Codex can operate the VCR itself, with infrared commands to control it and power readings to check what it is doing.
+
+An [M5Stack Atom Lite](https://link.amazon/B006NVWEM), a little ESP32 device with a built-in infrared transmitter, sends the VCR commands like play, stop, and rewind. It cost me $14. I 3D-printed a small stand for cents to hold it up against the VCR, aimed at its infrared receiver.
+
+A power meter supplies the feedback. The deck draws different amounts of power when the tape transport is active and when it is stopped with a tape loaded. The workflow watches those measured states rather than assuming an IR command worked. To rewind, it sends Stop, checks that the deck has settled, sends Rewind, then watches for sustained activity followed by a stable return to the stopped state. Those checks are specific to this VCR and setup.
 
 At capture time, the software starts recording before sending Play, so it does not miss the beginning while getting ready. It then watches for the deck to become active. When the tape reaches its physical end and the transport stops, the power draw settles back into the stopped range. That sustained change is how the workflow detects end-of-tape, alongside the capture's own integrity checks. It records through the TV programming, static, and silence instead of using the content to guess where the tape ends. An unexpected stop or ambiguous meter evidence still needs checking; a power reading alone cannot explain why the transport stopped.
 
-Then, later in August, I had it help redesign the RF amplifier PCB for a more ordinary, externally regulated 9V input. I wanted the power setup to be less exotic. This was a later hardware experiment, not something I had to finish before getting that first picture in July.
+## A revised RF amplifier
+
+Later in August, I had Codex help redesign the RF amplifier PCB for a more ordinary, externally regulated 9V input. I wanted the power setup to be less exotic. This was a later hardware experiment, not something I had to finish before getting that first picture in July.
 
 The redesign passed KiCad electrical and layout checks, and the prototype fabrication order shipped. That is not a bench-tested result yet. Still, going from a project I had not managed to start to ordering a revised amplifier board is quite a progression.
 
@@ -130,7 +141,7 @@ People have been asking what this approach costs. I went back through my purchas
 | --- | ---: |
 | Sony SLV-688HF VCR, including shipping and tax | $69.13 |
 | Capture computer, salvaged from the junk pile at work | $0 |
-| Samsung 980 1 TB NVMe scratch SSD, already on hand | $0 additional spending; allow about $300 for a new 1 TB replacement today |
+| Samsung 980 1 TB NVMe scratch SSD, already on hand | $0 additional spending; about $300 replacement allowance based on the September 2026 listing below |
 | Capture-PC boot SSD, PCIe NVMe adapter, BNC cable, tap lead, and SMA/BNC adapters, grouped in one shipment | $100.49 |
 | S-Video-to-BNC splitter shipment | $8.77 |
 | SMA DC-block shipment | $27.38 |
@@ -140,13 +151,13 @@ People have been asking what this approach costs. I went back through my purchas
 | 3D-printed stand for aiming the IR controller at the VCR | Cents |
 | VCR power meter for transport-state monitoring | About $14 |
 | Estimated additional spending for my setup | **About $464** |
-| With a current replacement allowance for the scratch SSD | **About $764** |
+| With that replacement allowance for the scratch SSD | **About $764** |
 
 Apart from the scratch SSD's explicitly marked replacement allowance, these are historical purchase amounts for my setup, including things bought while experimenting, not a recommended shopping list. The three matching AliExpress card orders show $30.87, $31.48, and $27.67. One card was a dud, so I ended up buying three; that is my spending, not a requirement to buy three cards. The emails also carry a shipping-fee exclusion notice, so those amounts may not capture every charge.
 
 The amplifier batch is about $140 from memory, pending the final invoice. I am counting the whole batch rather than dividing it into a misleadingly cheap single-board price. The Amazon shipment totals also differ from the initial order confirmation. With the $14 IR controller, roughly $14 power meter, and cents for the printed stand, call this roughly $464, with some accounting still to reconcile.
 
-The scratch SSD was another thing I already had, not another free component somebody else can assume they will find. Current prices are wild. On September 13, 2026, a [Best Buy marketplace listing for a Samsung 990 EVO Plus 1 TB](https://www.bestbuy.com/product/samsung-990-evo-plus-ssd-1tb-pcie-gen-4x4--5x2-m-2-2280-speeds-up-to-7150-mb-s/J3ZYG2TVFS/sku/12161481) showed $299.74, sold and shipped by Merchant Expo LLC. I am using roughly $300 as a current replacement allowance, before tax. That is a newer model, not the Samsung 980 actually in my machine, and one listing rather than the cheapest-drive claim or a market average.
+The scratch SSD was another thing I already had, not another free component somebody else can assume they will find. On September 13, 2026, a [Best Buy marketplace listing for a Samsung 990 EVO Plus 1 TB](https://www.bestbuy.com/product/samsung-990-evo-plus-ssd-1tb-pcie-gen-4x4--5x2-m-2-2280-speeds-up-to-7150-mb-s/J3ZYG2TVFS/sku/12161481) showed $299.74, sold and shipped by Merchant Expo LLC. That is the basis for the roughly $300 replacement allowance, before tax. It is a newer model than the Samsung 980 in my machine, and one listing rather than a cheapest-drive claim or a market average. This price comparison is a September snapshot.
 
 The capture computer came out of the junk pile at work. It cost me nothing. Maybe call it a $100 used computer if you had to find something similar, but that is my guess, not a checked price. Including both that computer estimate and the scratch SSD allowance puts this partial budget around $864. The separate boot SSD and PCIe adapter I bought are already counted in the shipment above; the 1 TB scratch drive is not bundled into that amount.
 
@@ -166,8 +177,8 @@ I am keeping my own pipeline repo and tape collection private, but you do not ne
 
 But the payoff is that I can now put a tape in, start a new Codex thread in the repo, and give it an ingest goal.
 
-It reads the instructions and notes, checks that there is room for the capture, rewinds the tape through the IR controller, and watches the power meter to confirm the rewind has finished. It gets the capture running, sends Play, and records the whole tape, using the meter to detect end-of-tape. Then it can carry on with preserving the files on the NAS, decoding, reviewing, and writing up what it found. Capture everything first; sort out the contents afterward.
-
 There is a lot behind that little request, and it can still need my help when something goes wrong. But I no longer have to manually coordinate every command on every machine just to get through a tape. The scripts, checks, and long journal are what let a fresh thread pick up the job.
 
-That is the part I find amazing. This sat on my someday pile for about two years, and now I can toss in a tape and ask Codex to get started. I did not set out to build all of this. I wanted to see what was on the tapes.
+What amazes me is that Codex can coordinate the whole workflow across three computers, from capturing the tape through preserving, decoding, reviewing, and exporting it, with the records updated at the end. It also coordinates ASR for Cantonese, Mandarin, and English, helps translate the speech, finds home-video sections among the recorded TV, and points out interesting things it notices in the footage.
+
+This sat on my someday pile for about two years. Now I can toss in a tape and ask Codex to take it through the whole process and help me discover what I have been keeping in those boxes. That feels magical.
