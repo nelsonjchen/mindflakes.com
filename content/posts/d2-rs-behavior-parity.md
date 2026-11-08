@@ -1,7 +1,7 @@
 ---
 title: "Introducing d2-rs: a Rust port of D2 for the CLI and WebAssembly"
 date: 2026-11-07
-lastmod: 2026-11-07
+lastmod: 2026-11-08
 draft: false
 slug: "d2-rs-behavior-parity"
 tags:
@@ -37,6 +37,16 @@ It's an independent, unofficial project, licensed under MPL-2.0 like D2. All thr
 {{< figure src="/images/d2-rs-workflow.png" alt="D2 source goes through Go D2 and d2-rs, producing diagrams whose output, time and memory are compared. The d2-rs output is labelled This diagram." caption="d2-rs drawing its own comparison workflow, rendered with ELK. A little meta." link="/images/d2-rs-workflow.png" width="520" >}}
 
 The [D2 source for this diagram](/images/d2-rs-workflow.d2) is available too.
+
+## We ended up porting a lot of Go
+
+This part still amazes me: getting D2's output to match meant reimplementing a substantial amount of the Go code underneath it in Rust. A perfectly good Rust library can produce a different compressed stream, format a float differently, or choose a different sort order. Those differences matter when the target is the same bytes.
+
+So the agents ported the Go behavior D2 depends on: float parsing and formatting, sorting, random-number generation, compression, image encoding, ZIP output, and more. Even the arithmetic needed attention. Go can fuse a multiply and add on arm64 into a single rounding step, while the x86-64 implementation uses separate operations. The Rust port had to follow the corresponding architecture to get the same result.
+
+That reached into D2's dependencies too: Markdown parsing, code highlighting, LaTeX, text shaping, sketch rendering and PDF generation. The [project's inventory][go-ports] gives a fuller picture. Go's deflate and zlib implementation is already available as the standalone `d2-rs-goflate` crate; many of the other ports are modules within the crates that use them.
+
+That's pretty hardcore. I set out wanting D2 in Rust and WebAssembly, and the work reached all the way down to compression decisions and floating-point rounding. The shipped implementation runs in Rust; Go is used as the reference for testing it.
 
 ## Correct, but stupidly slow
 
@@ -117,3 +127,4 @@ Thanks to the D2 team for the language and the test suites that made this work p
 [repo]: https://github.com/nelsonjchen/d2-rs
 [benchmarks]: https://github.com/nelsonjchen/d2-rs/blob/main/docs/BENCHMARKS.md
 [issues]: https://github.com/nelsonjchen/d2-rs#known-issues
+[go-ports]: https://github.com/nelsonjchen/d2-rs#go-behavior-ported
