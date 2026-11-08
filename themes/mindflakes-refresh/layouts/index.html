@@ -2,6 +2,9 @@
   <section class="shell intro">
     <h1>{{ site.Params.sidebarHeader | default site.Title }}</h1>
     <p>{{ site.Params.sidebarText | markdownify }}</p>
+    {{ with site.Params.aiWritingNote }}
+      <p>{{ . | markdownify }}</p>
+    {{ end }}
   </section>
 
   {{ $pages := where site.RegularPages "Type" "posts" }}

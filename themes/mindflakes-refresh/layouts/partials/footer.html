@@ -1,5 +1,10 @@
 <footer class="site-footer">
   <div class="shell footer-shell">
+    {{ if not .IsHome }}
+      {{ with site.Params.aiWritingNote }}
+        <p class="footer-note">{{ . | markdownify }}</p>
+      {{ end }}
+    {{ end }}
     <p>&copy; {{ now.Year }} Nelson Chen</p>
     <p><a href="{{ "/index.xml" | relURL }}">RSS</a></p>
   </div>

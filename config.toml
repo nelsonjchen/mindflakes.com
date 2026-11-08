@@ -26,6 +26,10 @@ sidebarText = """
 This is a site for stuff I write that doesn't fit in 280 characters or simple images.
 """
 
+aiWritingNote = """
+A lot of the posts here are AI-written. If your reaction is “ai:dr”, I don't blame you. “I” post this stuff in the hope that humans and agents who find it later won't have to do quite so much work—and that it inspires people to fix annoyances of their own, small or large.
+"""
+
 truncate = false
 
 [markup]

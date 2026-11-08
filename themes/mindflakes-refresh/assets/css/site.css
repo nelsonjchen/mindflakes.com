@@ -257,6 +257,11 @@ a {
   margin-top: 2rem;
 }
 
+.footer-note {
+  flex-basis: 100%;
+  margin: 0;
+}
+
 .footer-shell {
   display: flex;
   justify-content: space-between;
