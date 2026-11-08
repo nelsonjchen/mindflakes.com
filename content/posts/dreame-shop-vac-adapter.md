@@ -38,7 +38,7 @@ The Stanley version started from a roughly 30.75 mm hose connector. A separate t
 
 {{< figure src="/images/dreame-stanley-adapter-render.webp" alt="CAD render of the Stanley SL18129 version: a green dock card adapter on the left and its separate plug-in elbow on the right." caption="Stanley SL18129: the REV 5 dock adapter and matching Stanley-to-Stanley elbow, rendered from the actual CAD meshes. The pieces are separated for visibility." link="/images/dreame-stanley-adapter-render.webp" >}}
 
-The DeWalt needed its own measurements. Its cuff measured 44.77 mm at the tip and 45.77 mm at the wider end over 62.24 mm. Codex used that taper for the portion inserted into the socket, with clearance added explicitly, and enlarged the bend for the bigger connector. A nominal hose size wasn't enough to design the actual mating surface.
+I switched from the Stanley to the newer DeWalt because it was quieter. That meant measuring a different hose connector and making another version of the adapter. Its cuff measured 44.77 mm at the tip and 45.77 mm at the wider end over 62.24 mm. Codex used that taper for the portion inserted into the socket, with clearance added explicitly, and enlarged the bend for the bigger connector. A nominal hose size wasn't enough to design the actual mating surface.
 
 {{< figure src="/images/dreame-dewalt-adapter-render.webp" alt="CAD render of the DeWalt DXV05P-QT version: a yellow dock card adapter with a larger outlet on the left and its matching separate elbow on the right." caption="DeWalt DXV05P-QT: the measured-cuff REV 5 adapter and matching DeWalt-to-DeWalt elbow. These are CAD renders, not photos of printed parts." link="/images/dreame-dewalt-adapter-render.webp" >}}
 
