@@ -1,0 +1,21 @@
+direction: down
+
+source: D2 source\nfor this diagram {
+  shape: document
+}
+go: Go D2\nThe reference
+rust: d2-rs\nThe Rust port
+go_svg: Reference SVG {
+  shape: document
+}
+rust_svg: This diagram {
+  shape: document
+}
+check: Compare the output\nMeasure time and memory
+
+source -> go
+source -> rust
+go -> go_svg
+rust -> rust_svg
+go_svg -> check
+rust_svg -> check
