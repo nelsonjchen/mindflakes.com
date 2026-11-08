@@ -2,7 +2,7 @@
 title: "Introducing d2-rs: a Rust port of D2 for the CLI and WebAssembly"
 date: 2026-11-07
 lastmod: 2026-11-07
-draft: true
+draft: false
 slug: "d2-rs-behavior-parity"
 tags:
   - rust
