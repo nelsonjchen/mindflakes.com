@@ -1,6 +1,7 @@
 ---
 title: "A wet/dry vacuum solved my Dreame L50 Ultra's hairball problem"
 date: 2026-11-08
+lastmod: 2026-11-09
 draft: false
 slug: "dreame-shop-vac-adapter"
 tags:
@@ -65,6 +66,12 @@ Only after starting this project did I learn that people also use wet/dry vacuum
 I'm happy with how this turned out. The adapter handles the airflow path, Home Assistant handles the motor timing, and I haven't had a hairball since putting it into use. The quieter DeWalt also made it easier to live with. This solved the annoyance I set out to fix.
 
 If you have a similar problem, the [source and model files][repo] should give you a starting point. The useful part of keeping it parametric is that a different hose can become another variant, using its actual measurements.
+
+## Known issue: the bag-change reminder
+
+The Dreame still periodically refuses to auto-empty and tells me to change the bag. Its bag-change reminder is based on an interval, rather than a sensor measuring how full the bag actually is. That's separate from checking whether a bag is present in the dock.
+
+With this setup, I disregard the bag-change message itself: there isn't a dock bag to replace. The reminder can still interrupt auto-emptying, but it doesn't mean a bag has filled up or that the adapter has developed another hairball.
 
 [build123d]: https://build123d.readthedocs.io/en/latest/
 [repo]: https://github.com/nelsonjchen/wet-dry-vac-to-dreame-l50-ultra-adapter
