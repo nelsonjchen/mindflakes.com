@@ -1,0 +1,32 @@
+{{ define "main" }}
+  {{ $posts := where site.RegularPages "Type" "posts" }}
+  {{ $years := $posts.GroupByDate "2006" }}
+  <article class="shell archive">
+    <header class="archive-head">
+      <h1>{{ .Title }}</h1>
+      <p class="archive-summary">{{ len $posts }} posts</p>
+      <nav class="archive-years" aria-label="Jump to a year">
+        {{ range $years }}
+          <a href="#year-{{ .Key }}">{{ .Key }} <span>({{ len .Pages }})</span></a>
+        {{ end }}
+      </nav>
+    </header>
+
+    {{ range $years }}
+      <section class="archive-year" aria-labelledby="year-{{ .Key }}">
+        <h2 id="year-{{ .Key }}">{{ .Key }}</h2>
+        {{ range .Pages.GroupByDate "2006-01" }}
+          <h3 class="archive-month">{{ (index .Pages 0).Date.Format "January" }}</h3>
+          <ul class="archive-list">
+            {{ range .Pages.ByDate.Reverse }}
+              <li>
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2" }}</time>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </section>
+    {{ end }}
+  </article>
+{{ end }}

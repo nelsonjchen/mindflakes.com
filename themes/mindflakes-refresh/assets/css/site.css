@@ -101,6 +101,88 @@ a {
   color: var(--link);
 }
 
+a:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 3px;
+}
+
+.menu a[aria-current="page"] {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.archive {
+  max-width: 48rem;
+}
+
+.archive-head {
+  margin-bottom: 2rem;
+}
+
+.archive-summary {
+  color: var(--muted);
+  margin-bottom: 0.7rem;
+}
+
+.archive-years {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1rem;
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+}
+
+.archive-years span {
+  color: var(--muted);
+}
+
+.archive-year {
+  margin-bottom: 2.5rem;
+}
+
+.archive-year h2 {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.4rem;
+  font-size: 1.6rem;
+  scroll-margin-top: 1rem;
+}
+
+.archive-month {
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.archive-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.archive-list li {
+  display: grid;
+  grid-template-columns: 4.4rem minmax(0, 1fr);
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+  line-height: 1.5;
+}
+
+.archive-list time {
+  color: var(--muted);
+  font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.83rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.archive-list a {
+  overflow-wrap: anywhere;
+  text-underline-offset: 0.15em;
+}
+
 .stream {
   border-top: 1px solid var(--line);
 }
