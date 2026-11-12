@@ -1,0 +1,31 @@
+direction: down
+classes: {
+  device: {
+    style.fill: "#f2f5f7"
+    style.stroke: "#526575"
+    style.border-radius: 10
+    style.font-size: 21
+  }
+}
+dreame: Dreame L50 Ultra {
+  class: device
+}
+ha: Home Assistant\nDreame integration {
+  class: device
+}
+s31: Sonoff S31 · ESPHome\nRelay defaults OFF on boot\nLocal cutoff after 2 minutes {
+  class: device
+  style.fill: "#e7f1e7"
+}
+vac: DeWalt wet/dry vacuum {
+  class: device
+}
+dreame -> ha: Auto-empty status
+ha -> s31: |md
+  **Active:** wait 6 seconds
+
+  Confirm auto-empty status is still active → ON
+
+  **Idle:** OFF
+|
+s31 -> vac: Switched power

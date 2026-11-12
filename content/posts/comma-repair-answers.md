@@ -14,7 +14,7 @@ tags:
 
 One of the things I keep working on is the [unofficial comma hardware documentation][docs]. Somebody has a broken device, people help investigate, and eventually there is an answer somewhere in Discord.
 
-I wrote the early documentation by hand. More recently, I've been using Codex to crawl through Discord discussions for updates, write additions, and straighten out existing material, under my direction. The repairs and reported results come from the community members credited in the docs. Codex also drafted this blog post.
+I wrote the early documentation by hand. More recently, I've been using [Codex](https://openai.com/codex/) to crawl through Discord discussions for updates, write additions, and straighten out existing material, under my direction. The repairs and reported results come from the community members credited in the docs. Codex also drafted this blog post.
 
 Then somebody else has the same problem.
 

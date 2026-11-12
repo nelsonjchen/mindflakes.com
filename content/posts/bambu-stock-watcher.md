@@ -16,7 +16,7 @@ image: "/images/bbltracker.com.png"
 
 I've been running a [Bambu Lab](https://bambulab.com/) Store filament tracker at [bbltracker.com](https://bbltracker.com/).
 
-I built this tracker with the assistance of Google Antigravity and Codex. I supplied the ideas and directed the work; the agents did essentially all of the technical investigation and coding. AI also drafted this post.
+I built this tracker with the assistance of Google Antigravity and [Codex](https://openai.com/codex/). I supplied the ideas and directed the work; the agents did essentially all of the technical investigation and coding. AI also drafted this post.
 
 ![bbltracker dashboard](/images/bbltracker.com.png)
 

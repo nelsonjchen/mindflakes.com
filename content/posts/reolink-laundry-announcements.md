@@ -13,7 +13,7 @@ tags:
 
 I wish Reolink did more with the speakers in its cameras. They're already powered, on the network, and sitting in useful places. They could double as little smart speakers for announcements, but that use doesn't seem to get much attention.
 
-I got these camera announcements working with the assistance of Codex. I supplied the ideas and directed the work; Codex did the technical investigation and implementation for my integration fixes and automations. The existing integrations are credited below. Codex also drafted this post.
+I got these camera announcements working with the assistance of [Codex](https://openai.com/codex/). I supplied the ideas and directed the work; Codex did the technical investigation and implementation for my integration fixes and automations. The existing integrations are credited below. Codex also drafted this post.
 
 I'd already [opened an issue about adding speaker playback to the library behind Home Assistant's official Reolink integration][audiotalk-issue]. I decided to have Codex investigate getting it working for my setup.
 

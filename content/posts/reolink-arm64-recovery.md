@@ -14,7 +14,7 @@ tags:
 
 I wanted to have a go at making my own ARM64 port of Reolink's macOS app. They had not released one yet, and getting there first would have been fun to show off. Spoiler alert: they beat me. Oh well.
 
-I'm doing this with the assistance of Codex. I supplied the goals and directed the work; Codex did the reverse engineering, implementation, and comparison tests described here.
+I'm doing this with the assistance of [Codex](https://openai.com/codex/). I supplied the goals and directed the work; Codex did the reverse engineering, implementation, and comparison tests described here.
 
 I was also curious why an Electron app was still waiting for an ARM64 version. It turned out there was much more native code involved than that description suggested. The interface uses Electron, but communication with Reolink's cameras and NVRs goes through a native C++ SDK, with its own device state transitions, encryption, media handling, configuration serializers and callback machinery. Porting that meant understanding considerably more than the interface.
 

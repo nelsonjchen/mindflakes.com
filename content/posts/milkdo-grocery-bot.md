@@ -15,7 +15,7 @@ tags:
 
 [Yrenia](https://yrenia.com/) and I use a Telegram bot called [Milkdo][repo] to maintain our Todoist grocery list. We can send a message or a voice note in our group instead of opening Todoist to enter each item. It's a small tool we actually use, and we keep fixing the parts that annoy us.
 
-I first had a go at this myself in 2024, cobbling the code together by hand with some help from GitHub Copilot autocomplete. Much later, I brought it forward with OpenAI Codex doing substantial refactoring, bug investigation, implementation and tests under my direction. Codex also helped draft this post. This is a codebase that went from lightly AI-assisted to heavily agent-refactored over more than two years of use and maintenance.
+I first had a go at this myself in 2024, cobbling the code together by hand with some help from GitHub Copilot autocomplete. Much later, I brought it forward with OpenAI [Codex](https://openai.com/codex/) doing substantial refactoring, bug investigation, implementation and tests under my direction. Codex also helped draft this post. This is a codebase that went from lightly AI-assisted to heavily agent-refactored over more than two years of use and maintenance.
 
 I don't think of Milkdo as a “claw.” It's our grocery bot, with a specific list and a small set of operations. The point is to make maintaining that list less annoying for the two of us.
 

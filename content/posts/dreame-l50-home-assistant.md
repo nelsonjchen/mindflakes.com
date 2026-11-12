@@ -13,7 +13,7 @@ tags:
 
 I wanted my Dreame L50 Ultra in Home Assistant, with its settings and room controls available for my own automations. That led to a small maintenance fork, an investigation into what the phone app sends, and a surprisingly consequential missing `@property` decorator.
 
-I directed the work, with Codex doing the investigation, code changes and regression tests. It also helped draft this post. My role was setting the goals and providing the context from my vacuum and Home Assistant setup. The work described here was done in September.
+I directed the work, with [Codex](https://openai.com/codex/) doing the investigation, code changes and regression tests. It also helped draft this post. My role was setting the goals and providing the context from my vacuum and Home Assistant setup. The work described here was done in September.
 
 The starting point was [Tasshack's Dreame integration][upstream]. It already does the substantial work: connecting to the vacuum, exposing its settings, handling maps, and providing room-cleaning controls. [My fork][fork] builds on its development branch, starting at `v2.0.0b25`, and maintains the changes on `main`.
 

@@ -16,7 +16,7 @@ tags:
 
 The house I'm in has an extensive Reolink camera system, inside and outside. We're keeping an eye on three doggies as they move between those spaces. Reolink's desktop app didn't automatically switch to the cameras with activity, and I found it a bit crashy in my use. I wanted the views to follow wherever the dogs were hanging out without having to keep switching cameras myself.
 
-So I built two sister apps with the assistance of Codex:
+So I built two sister apps with the assistance of [Codex](https://openai.com/codex/):
 
 - [Guard Dog](#guard-dog), a Kotlin app for the living-room Android TV, gives everyone in the room a view of what's happening.
 - [Sentry](#sentry), a native Swift app for my Mac, lets me watch the doggies while I'm working, including in Picture in Picture.

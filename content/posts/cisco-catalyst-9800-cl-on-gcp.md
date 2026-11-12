@@ -13,7 +13,7 @@ tags:
 
 I finally wrote up my notes on getting a modern [Cisco Catalyst 9800-CL](https://www.cisco.com/c/en/us/products/wireless/catalyst-9800-cl-wireless-controller-cloud/index.html) running on [Google Cloud Platform](https://cloud.google.com/).
 
-This was my first time using Codex to bring up a GCP setup from scratch. I supplied the goals and directed the work; Codex did essentially all of the technical investigation, image modifications, and scripting to get the controller working. Codex also drafted this post.
+This was my first time using [Codex](https://openai.com/codex/) to bring up a GCP setup from scratch. I supplied the goals and directed the work; Codex did essentially all of the technical investigation, image modifications, and scripting to get the controller working. Codex also drafted this post.
 
 The short version is that this was much more of a fight than I expected.
 

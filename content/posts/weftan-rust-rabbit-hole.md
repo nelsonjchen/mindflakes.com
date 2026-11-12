@@ -14,7 +14,7 @@ tags:
 
 Weftan started as a fun backup plan. If TALA died hard, could I still have the layout engine around in some usable form?
 
-I built Weftan with the assistance of Codex, using the Luna models available at the time. I supplied the ideas and directed the work; Codex did essentially all of the technical investigation and coding described here, including the reverse engineering and Rust implementation. AI also drafted this post.
+I built Weftan with the assistance of [Codex](https://openai.com/codex/), using the Luna models available at the time. I supplied the ideas and directed the work; Codex did essentially all of the technical investigation and coding described here, including the reverse engineering and Rust implementation. AI also drafted this post.
 
 TALA arranges diagrams for D2. Recovering its behavior and rebuilding it in Rust seemed like an interesting thing to try. That eventually became [Weftan][weftan], and then a larger work-in-progress project called `d2-rs`.
 

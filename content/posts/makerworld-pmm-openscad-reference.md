@@ -13,7 +13,7 @@ tags:
 
 I made an [unofficial MakerWorld PMM OpenSCAD reference][pmm-reference-repo].
 
-I put this reference together with the assistance of Codex. I supplied the idea and directed the work; Codex did the research, coding, and documentation, including collecting the PMM rules and building the font index. Codex also drafted this post.
+I put this reference together with the assistance of [Codex](https://openai.com/codex/). I supplied the idea and directed the work; Codex did the research, coding, and documentation, including collecting the PMM rules and building the font index. Codex also drafted this post.
 
 The short version is that I wanted [Codex][openai-codex] to help me make MakerWorld-customizable [OpenSCAD][openscad] models, and I did not want it guessing from old forum posts, UI behavior, and whatever I happened to remember at 1 AM.
 

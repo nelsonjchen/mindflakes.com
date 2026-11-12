@@ -14,7 +14,7 @@ tags:
 
 I made [Plainize Clip][plainize-clip-repo], a tiny macOS app that cleans the current clipboard and quits.
 
-I built Plainize Clip with the assistance of Codex. I supplied the idea and directed the work; Codex did the reverse engineering and implementation. Codex also drafted this post.
+I built Plainize Clip with the assistance of [Codex](https://openai.com/codex/). I supplied the idea and directed the work; Codex did the reverse engineering and implementation. Codex also drafted this post.
 
 The short version is that I still wanted the old [Plain Clip][plain-clip] shape: copy weird text, launch the app, paste something boring.
 

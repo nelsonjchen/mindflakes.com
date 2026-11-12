@@ -11,7 +11,7 @@ tags:
   - ai-assisted
 ---
 
-I added a daily Codex job to check [the filament tracker]({{< relref "bambu-stock-watcher.md" >}}). When it finds a problem it can diagnose clearly, it can fix the code, validate the change, deploy it, and check the live site again.
+I added a daily [Codex](https://openai.com/codex/) job to check [the filament tracker]({{< relref "bambu-stock-watcher.md" >}}). When it finds a problem it can diagnose clearly, it can fix the code, validate the change, deploy it, and check the live site again.
 
 I set the requirements and gave it permission to make scoped repairs. Codex does the investigation, implementation, and deployment. Codex also drafted this post from the recorded runs and my direction.
 

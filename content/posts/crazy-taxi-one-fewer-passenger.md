@@ -14,7 +14,7 @@ tags:
 
 I got curious about whether a Crazy Taxi tool-assisted speedrun could be slightly faster with one fewer passenger.
 
-I investigated this Crazy Taxi route idea with the assistance of Codex, using the Luna models available at the time. I supplied the ideas and directed the work; Codex did essentially all of the technical investigation and coding, including the game analysis and viewer changes. AI also drafted this post.
+I investigated this Crazy Taxi route idea with the assistance of [Codex](https://openai.com/codex/), using the Luna models available at the time. I supplied the ideas and directed the work; Codex did essentially all of the technical investigation and coding, including the game analysis and viewer changes. AI also drafted this post.
 
 I do not really have TAS skills. This was a “could that work?” rabbit hole that led to looking at passenger tables, destination selection, and the game clock. I have not made a faster run.
 

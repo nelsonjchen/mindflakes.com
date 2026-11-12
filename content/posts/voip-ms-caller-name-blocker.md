@@ -14,7 +14,7 @@ tags:
 
 I made a small [Rust VoIP.ms CNAME blocker][cname-blocker-repo].
 
-I built this caller-name blocker with the assistance of Codex, using GPT-5.4 with medium reasoning effort. I supplied the idea and directed the work; Codex did essentially all of the technical investigation and coding. AI also drafted this post.
+I built this caller-name blocker with the assistance of [Codex](https://openai.com/codex/), using GPT-5.4 with medium reasoning effort. I supplied the idea and directed the work; Codex did essentially all of the technical investigation and coding. AI also drafted this post.
 
 The short version is that I wanted to block a caller by name instead of by phone number.
 

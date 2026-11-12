@@ -17,7 +17,7 @@ The radar sends its detections over Bluetooth. I also have the recurring problem
 
 The clip is sold as a saddle-bag strap mount with a Garmin quarter-turn fitting, including support for the RVR315. It can rotate and tilt and comes with a safety tether. I'm using it on my CamelBak instead of a bike's saddle bag.
 
-That turned into [RideWatch][ridewatch-source], a standalone Android app I built with Codex doing the research and implementation under my direction. The source is now public. It's still a prototype, but I've been using it on scooter rides.
+That turned into [RideWatch][ridewatch-source], a standalone Android app I built with [Codex](https://openai.com/codex/) doing the research and implementation under my direction. The source is now public. It's still a prototype, but I've been using it on scooter rides.
 
 It's neat how much I can follow by listening. I can tell when a car behind me is slowing down to pull over or park, or when one is approaching very quickly. Those changing alerts give me a sense of what's happening behind me while my phone stays in my pocket.
 

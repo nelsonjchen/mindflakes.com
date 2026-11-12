@@ -15,7 +15,7 @@ tags:
 
 I've released [d2-rs][repo], a Rust port of the [D2][d2] diagramming toolchain. It includes the compiler, Dagre, ELK and TALA layout engines, SVG rendering, PNG/PDF/PPTX/GIF exports, and a command-line app. It also builds as a WebAssembly package for Node and browsers, which was one of my original reasons for wanting the port.
 
-I directed the project over about two months, from September to early November. Codex did most of the investigation and implementation for the first six weeks. Then Claude supervised Codex runs, reviewed changes and chose the next work, as well as contributing implementation. The port follows D2's source and uses its test suites to check the results.
+I directed the project over about two months, from September to early November. [Codex](https://openai.com/codex/) did most of the investigation and implementation for the first six weeks. Then [Claude](https://claude.com/) supervised Codex runs, reviewed changes and chose the next work, as well as contributing implementation. The port follows D2's source and uses its test suites to check the results.
 
 The current release targets Go D2 master at `6a7b48378`, from October 11. All 944 boards in upstream's end-to-end golden suite match: 933 SVGs and 11 expected errors, across all three layout engines. That comparison normalizes the XML declaration, version stamp and trailing newline; the rest of the SVG must match byte for byte.
 

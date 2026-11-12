@@ -11,7 +11,7 @@ tags:
   - ai-assisted
 ---
 
-I wanted to recover some VHS tapes. Somehow this turned into tapping a signal inside a Sony VCR, putting capture cards in a computer from the junk pile at work, spreading the processing across three machines, and asking Codex to help redesign an amplifier PCB.
+I wanted to recover some VHS tapes. Somehow this turned into tapping a signal inside a Sony VCR, putting capture cards in a computer from the junk pile at work, spreading the processing across three machines, and asking [Codex](https://openai.com/codex/) to help redesign an amplifier PCB.
 
 I built this VHS pipeline with the assistance of Codex. I supplied the ideas, directed the work, and handled the physical hardware; Codex did essentially all of the technical investigation and custom coding for my setup. The pipeline builds on the existing projects credited below. Codex also drafted this post.
 

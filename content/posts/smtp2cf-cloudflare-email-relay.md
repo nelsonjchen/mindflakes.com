@@ -14,7 +14,7 @@ tags:
 
 I just finished moving my Gmail "Send mail as" setup to [Cloudflare Email Service's native SMTP submission][cloudflare-smtp]. I can send email from my mindflakes.com address.
 
-I built the SMTP relay described here with the assistance of Codex. I supplied the idea and directed the work; Codex did the technical investigation and implementation. Codex also drafted this post.
+I built the SMTP relay described here with the assistance of [Codex](https://openai.com/codex/). I supplied the idea and directed the work; Codex did the technical investigation and implementation. Codex also drafted this post.
 
 **Update, October 12, 2026: Google is removing Gmail's "Send as" support for third-party addresses in January 2027.** [Google's announcement][gmail-send-as-removal] says existing setups continue during the transition, but new configurations may be restricted. Gmail-to-Gmail aliases and Google Workspace "Send as" are exempt. Incoming forwarding is unaffected. The sending setup described here now has an end date. Darn, I was looking forward to this for years. The rest of this post describes what worked in June.
 
