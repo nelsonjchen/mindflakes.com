@@ -11,7 +11,7 @@ tags:
   - codex
 ---
 
-When I ride my scooter, I use a [Garmin Varia RVR315](https://www.garmin.com/en-US/p/669024/) bike radar to help keep track of vehicles approaching from behind. The radar clips onto the back of my CamelBak with an [EFEALL strap mount][radar-clip], and my phone stays in my pocket. I'm not a fan of mounting the phone on the scooter, so I wanted spoken information about vehicles approaching from behind without having to look at a screen.
+The [Garmin Varia RVR315](https://www.garmin.com/en-US/p/669024/) is designed as a bike radar, but I like using it on my scooter to help keep track of vehicles approaching from behind. The radar clips onto the back of my CamelBak with an [EFEALL strap mount][radar-clip], and my phone stays in my pocket. I'm not a fan of mounting the phone on the scooter, so I wanted spoken information about vehicles approaching from behind without having to look at a screen.
 
 The radar sends its detections over Bluetooth. I also have the recurring problem of Garmin's Android app stopping in the background and me forgetting to open it again. I wanted clearer connection behavior as well as the spoken alerts.
 
