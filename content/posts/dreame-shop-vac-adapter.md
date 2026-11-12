@@ -13,7 +13,7 @@ tags:
   - ai-assisted
 ---
 
-{{< figure src="/images/dreame-shop-vac-printed-adapters.webp" alt="The green Stanley adapter rests loose on the left inside the dock cavity; the DeWalt adapter is installed on the right and connected to its hose." caption="The Stanley adapter is resting loose in the dock cavity on the left. The DeWalt adapter is currently connected on the right. The DeWalt CAD model is shown below." link="/images/dreame-shop-vac-printed-adapters.webp" >}}
+{{< figure src="/images/dreame-shop-vac-full-setup.webp" alt="Dreame L50 Ultra dock and robot on the left, with a green printed adapter connected by a loop of black hose to the yellow DeWalt wet/dry vacuum under a table on the right." caption="The full setup: the Dreame dock on the left, connected to the DeWalt under the table on the right. The wheels are off to make it fit; the hose is still longer than it needs to be." link="/images/dreame-shop-vac-full-setup.webp" >}}
 
 My [Dreame L50 Ultra][dreame] could pick up dog hair, but its dock struggled to get the dense wads of hair out of the robot and into the bag. I made an adapter so an external wet/dry vacuum could do the emptying instead, with [Home Assistant](https://www.home-assistant.io/) handling the switching. The project is finished and in use, and I haven't had a hairball since!
 
@@ -32,6 +32,8 @@ I already had a **Stanley SL18129** on hand, so I started with that. I found it 
 ## Keeping the dock intact
 
 The robot and dock stay intact. The robot empties through the dock's existing evacuation path, then a printed adapter routes that path into a short hose connected to the wet/dry vacuum. I wanted a removable part at the bag interface, rather than cutting a hole in the dock and discovering afterward that I'd misunderstood the airflow.
+
+{{< figure src="/images/dreame-shop-vac-printed-adapters.webp" alt="The green Stanley adapter rests loose on the left inside the dock cavity; the DeWalt adapter is installed on the right and connected to its hose." caption="The Stanley adapter is resting loose in the dock cavity on the left. The DeWalt adapter is currently connected on the right. The DeWalt CAD model is shown below." link="/images/dreame-shop-vac-printed-adapters.webp" >}}
 
 The design involved more than making two holes line up. The dock detects whether a bag is present, and the adapter had to sit properly in its slot, keep a seal, leave room for the hose, and remain removable.
 
