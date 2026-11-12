@@ -1,7 +1,7 @@
 ---
 title: "Recovering readable C++ from Reolink's Apple Silicon SDK"
 date: 2026-10-03
-draft: true
+draft: false
 slug: "reolink-arm64-recovery"
 tags:
   - reverse-engineering

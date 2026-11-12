@@ -1,7 +1,7 @@
 ---
 title: "Guard Dog and Sentry: watching doggies with Reolink on Android TV and Mac"
 date: 2026-10-03
-draft: true
+draft: false
 slug: "guard-dog-camera-wall"
 tags:
   - android

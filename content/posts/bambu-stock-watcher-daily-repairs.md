@@ -1,7 +1,7 @@
 ---
 title: "A daily repair job for the filament tracker"
 date: 2026-10-15
-draft: true
+draft: false
 slug: "bambu-stock-watcher-daily-repairs"
 tags:
   - bambu

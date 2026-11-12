@@ -1,7 +1,7 @@
 ---
 title: "Building an Android app that talks about my bike radar"
 date: 2026-10-03
-draft: true
+draft: false
 slug: "ridewatch-bike-radar"
 tags:
   - android
