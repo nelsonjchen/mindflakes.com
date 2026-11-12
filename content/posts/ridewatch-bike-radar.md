@@ -1,17 +1,17 @@
 ---
-title: "Building an Android app that talks about my bike radar"
+title: "Building an Android app for spoken radar alerts on my scooter"
 date: 2026-10-03
 lastmod: 2026-11-11
 draft: false
 slug: "ridewatch-bike-radar"
 tags:
   - android
-  - cycling
+  - scooter
   - bluetooth
   - codex
 ---
 
-I use a [Garmin Varia RVR315](https://www.garmin.com/en-US/p/669024/) bike radar while riding my scooter. The radar clips onto the back of my CamelBak with an [EFEALL strap mount][radar-clip], and my phone stays in my pocket. I'm not a fan of mounting the phone on the scooter, so I wanted spoken information about vehicles approaching from behind without having to look at a screen.
+When I ride my scooter, I use a [Garmin Varia RVR315](https://www.garmin.com/en-US/p/669024/) bike radar to help keep track of vehicles approaching from behind. The radar clips onto the back of my CamelBak with an [EFEALL strap mount][radar-clip], and my phone stays in my pocket. I'm not a fan of mounting the phone on the scooter, so I wanted spoken information about vehicles approaching from behind without having to look at a screen.
 
 The radar sends its detections over Bluetooth. I also have the recurring problem of Garmin's Android app stopping in the background and me forgetting to open it again. I wanted clearer connection behavior as well as the spoken alerts.
 
@@ -31,7 +31,7 @@ The app now has a graphical lane showing detected vehicles, threat changes, synt
 
 ## A simulated ride
 
-Here's a short example with the app’s actual synthesized tones with numeric-repeat speech enabled. The detections and speed estimates are made up, using the wording from RideWatch's speech policy. Numbers are estimates in mph. The speech uses a computer voice; the Android voice on your phone will sound different. Tones play before speech, as they do in the app.
+Here's a short example with the app’s actual synthesized tones and numeric-repeat speech enabled. The detections and speed estimates are made up, using the wording from RideWatch's speech policy. Numbers are estimates in mph. The speech uses a computer voice; the Android voice on your phone will sound different. Tones play before speech, as they do in the app.
 
 <audio controls preload="none" aria-label="Eighteen-second simulated RideWatch tones and voice alerts">
   <source src="/audio/ridewatch-voice-demo.mp3" type="audio/mpeg">
