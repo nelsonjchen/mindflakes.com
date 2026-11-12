@@ -31,22 +31,23 @@ The app now has a graphical lane showing detected vehicles, threat changes, synt
 
 ## A simulated ride
 
-Here's a short voice-only example with numeric-repeat speech enabled. The detections and speed estimates are made up, using the wording from RideWatch's speech policy. Numbers are estimates in mph. This sample uses a computer voice; the Android voice on your phone will sound different, and the real app also plays chimes.
+Here's a short example with the app’s actual synthesized tones with numeric-repeat speech enabled. The detections and speed estimates are made up, using the wording from RideWatch's speech policy. Numbers are estimates in mph. The speech uses a computer voice; the Android voice on your phone will sound different. Tones play before speech, as they do in the app.
 
-<audio controls preload="none" aria-label="Sixteen-second simulated RideWatch voice alerts">
+<audio controls preload="none" aria-label="Eighteen-second simulated RideWatch tones and voice alerts">
   <source src="/audio/ridewatch-voice-demo.mp3" type="audio/mpeg">
   <a href="/audio/ridewatch-voice-demo.mp3">Listen to the simulated voice alerts</a>.
 </audio>
 
-| Time | Simulated situation | Spoken alert |
+| Time | Simulated situation | Sound |
 | --- | --- | --- |
-| 0 seconds | One car detected | “22” |
-| 2 seconds | Its speed estimate drops | “16” |
-| 4 seconds | A second car appears | “2 cars. 24” |
-| 6 seconds | Still two cars; the number updates | “23” |
-| 8 seconds | One car remains detected | “1 car. 20” |
-| 10 seconds | No targets remain detected | No speech |
-| 12 seconds | Radar disconnects; last known battery was 70% | “Disconnected. Last battery 70 percent” |
+| 0 seconds | Radar connects with no targets | Connected tone |
+| 2 seconds | One car detected | Approach tone, then “22” |
+| 4 seconds | Its speed estimate drops | “16” |
+| 6 seconds | A second car appears and the threat level rises | Urgent tone, then “2 cars. 24” |
+| 8 seconds | Still two cars; the number updates | “23” |
+| 10 seconds | One car remains detected | “1 car. 20” |
+| 12 seconds | No targets remain detected | Empty-stream tone; no speech |
+| 14 seconds | Radar disconnects; last known battery was 70% | Lost-connection tone, then “Disconnected. Last battery 70 percent” |
 
 The count is announced when it changes within a group; the repeated numbers stay short. A lone car normally gets just the number. No detected targets means no speech in this mode, and silence still isn't an all-clear.
 
@@ -65,6 +66,8 @@ RideWatch keeps an explicit foreground monitoring service, releases it when paus
 Then there is the surprisingly large job of making an alert audible. Media volume, music ducking, speech, urgent interruptions, and output changes all affect what comes out. The current build uses different audio-focus requests for routine and urgent alerts and warns when the actual media volume is below the configured target or muted. Emulator checks exercise the focus and volume behavior, and I've been listening to the alerts on rides. Headphone-switch tests remain to be done.
 
 The automated tests, builds, and screen checks have helped get this far, and riding with it has given me a feel for how useful the spoken alerts can be. Controlled passes with reference measurements are still needed to check the range, speed estimates, and alert timing properly.
+
+One known issue: the battery reading seems stuck at 83%, including in Garmin's original app. I don't know why yet, so I wouldn't rely on that percentage.
 
 I'm happy with it! I can leave my phone in my pocket and hear what's happening behind me while I ride. That's what I wanted when I started this, and having it work on my scooter has been really satisfying.
 
