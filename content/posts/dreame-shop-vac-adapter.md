@@ -1,7 +1,7 @@
 ---
 title: "Solving my Dreame L50 Ultra's hairball problem with a 3D-printed adapter, wet/dry vac, and Home Assistant"
 date: 2026-11-08
-lastmod: 2026-11-11
+lastmod: 2026-11-12
 draft: false
 slug: "dreame-shop-vac-adapter"
 tags:
@@ -67,7 +67,13 @@ I'm happy with how this turned out, and buying the quieter DeWalt made it easier
 
 Only after starting this project did I learn that people also use wet/dry vacuums with relays for trapping rats! [Shawn Woods tested one][rat-trap-video]—an unexpected parallel, though it wasn't where my idea came from.
 
-## Known issue: the bag-change reminder
+## Known issues
+
+### It could be tidier
+
+The full setup is a big yellow wet/dry vac next to the dock. I left the DeWalt's wheels off so it fits under a table more compactly, but the dock's front stays open, which looks kind of ugly, and the hose is longer than it needs to be. It works, but there's room to make the arrangement much nicer to look at.
+
+### The bag-change reminder
 
 The Dreame's interval-based bag-change reminder still periodically skips auto-emptying, so the external vacuum doesn't turn on for that cycle either. On the next docking with auto-empty, it resumes working. There isn't a dock bag to replace with this setup, and the reminder doesn't mean the evacuation path has clogged again. This is separate from the dock's check for whether a bag is installed.
 
